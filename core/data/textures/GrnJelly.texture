@@ -1,0 +1,7 @@
+{
+    "image" : "GreenJellyfish.image",
+    "minFilter" : "nearest",
+    "magFilter" : "nearest",
+    "wrapX" : "clampToEdge",
+    "wrapY" : "clampToEdge"
+}

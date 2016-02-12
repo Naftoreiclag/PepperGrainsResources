@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "RoseCube.model",
+        "type" : "model",
+        "file" : "RoseCube.model"
+    },
+    {
+        "name" : "JellyCube.model",
+        "type" : "model",
+        "file" : "JellyCube.model"
+    }
+]

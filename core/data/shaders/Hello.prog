@@ -1,0 +1,22 @@
+{
+    "link" : [
+        "Hello.vertexShader",
+        "Hello.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "position",
+        "color" : "color",
+        "uv" : "texCoord"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "proj" : "uProj"
+    },
+    "controls" : {
+        "sampler2D" : [
+            "ambientTex"
+        ]
+    },
+    "fragOutput" : "fragColor"
+}

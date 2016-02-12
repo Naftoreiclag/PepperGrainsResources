@@ -1,0 +1,8 @@
+[
+    {
+        "name" : "Cube.geometry",
+        "type" : "geometry",
+        "file" : "Cube.fbx",
+        "track" : "Cube.mtl"
+    }
+]
