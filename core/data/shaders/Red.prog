@@ -1,0 +1,15 @@
+{
+    "link" : [
+        "Red.vertexShader",
+        "Red.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "position"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "proj" : "uProj"
+    },
+    "fragOutput" : "fragColor"
+}

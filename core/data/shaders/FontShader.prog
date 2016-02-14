@@ -1,0 +1,21 @@
+{
+    "link" : [
+        "FontShader.vertexShader",
+        "FontShader.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "position",
+        "uv" : "texCoord"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "proj" : "uProj"
+    },
+    "controls" : {
+        "sampler2D" : [
+            "image"
+        ]
+    },
+    "fragOutput" : "fragColor"
+}

@@ -8,5 +8,10 @@
         "name" : "GrnJelly.material",
         "type" : "material",
         "file" : "GrnJelly.material"
+    },
+    {
+        "name" : "Red.material",
+        "type" : "material",
+        "file" : "Red.material"
     }
 ]

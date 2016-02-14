@@ -8,5 +8,10 @@
         "name" : "JellyCube.model",
         "type" : "model",
         "file" : "JellyCube.model"
+    },
+    {
+        "name" : "RedCube.model",
+        "type" : "model",
+        "file" : "RedCube.model"
     }
 ]
