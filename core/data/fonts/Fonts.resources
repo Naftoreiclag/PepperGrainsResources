@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "Rainstorm.font",
+        "type" : "font",
+        "file" : "Rainstorm.font"
+    },
+    {
+        "name" : "RainstormFont.image",
+        "type" : "image",
+        "file" : "Rainstorm.png"
+    }
+]

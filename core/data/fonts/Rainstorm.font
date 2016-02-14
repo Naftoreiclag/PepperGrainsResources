@@ -1,0 +1,10 @@
+{
+    "metrics" : {
+        "imageFile" : "Rainstorm.png",
+        "baseline" : 0.5625
+    },
+    "rendering" : {
+        "technique" : "raster",
+        "source" : "RainstormFont.image"
+    }
+}
