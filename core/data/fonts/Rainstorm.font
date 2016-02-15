@@ -1,7 +1,13 @@
 {
     "metrics" : {
         "imageFile" : "Rainstorm.png",
-        "baseline" : 0.5625
+        "baseline" : 0.5625,
+        "manual" : [
+            {
+                "code" : 32,
+                "width" : 0.20
+            }
+        ]
     },
     "rendering" : {
         "technique" : "raster",
