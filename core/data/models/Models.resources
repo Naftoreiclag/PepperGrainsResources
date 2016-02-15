@@ -13,5 +13,10 @@
         "name" : "RedCube.model",
         "type" : "model",
         "file" : "RedCube.model"
+    },
+    {
+        "name" : "JellyUFO.model",
+        "type" : "model",
+        "file" : "JellyUFO.model"
     }
 ]

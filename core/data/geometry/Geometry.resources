@@ -4,5 +4,10 @@
         "type" : "geometry",
         "file" : "Cube.fbx",
         "track" : "Cube.mtl"
+    },
+    {
+        "name" : "UFO.geometry",
+        "type" : "geometry",
+        "file" : "UFO.fbx"
     }
 ]

@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "UFO.geometry",
+            "material" : "GrnJelly.material"
+        }
+    ]
+}
