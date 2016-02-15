@@ -1,11 +1,13 @@
 {
     "metrics" : {
-        "imageFile" : "Rainstorm.png",
+        "imageFile" : "RainstormMetrics.png",
         "baseline" : 0.5625,
+        "padding" : 0.1,
         "manual" : [
             {
+                "comment" : "space",
                 "code" : 32,
-                "width" : 0.20
+                "width" : 0.40
             }
         ]
     },

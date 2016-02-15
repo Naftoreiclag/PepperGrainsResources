@@ -7,7 +7,7 @@
     {
         "name" : "Rainstorm.image",
         "type" : "image",
-        "file" : "Rainstorm.png"
+        "file" : "Rainstorm2048.png"
     },
     {
         "name" : "Rainstorm.texture",
