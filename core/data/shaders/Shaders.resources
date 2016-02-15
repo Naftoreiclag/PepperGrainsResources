@@ -15,19 +15,19 @@
         "file" : "Hello.prog"
     },
     {
-        "name" : "FontShader.vertexShader",
+        "name" : "Font.vertexShader",
         "type" : "vertex-shader",
-        "file" : "FontShader.vert"
+        "file" : "Font.vert"
     },
     {
-        "name" : "FontShader.fragmentShader",
+        "name" : "Font.fragmentShader",
         "type" : "fragment-shader",
-        "file" : "FontShader.frag"
+        "file" : "Font.frag"
     },
     {
-        "name" : "FontShader.shaderProgram",
+        "name" : "Font.shaderProgram",
         "type" : "shader-program",
-        "file" : "FontShader.prog"
+        "file" : "Font.prog"
     },
     {
         "name" : "Red.vertexShader",
