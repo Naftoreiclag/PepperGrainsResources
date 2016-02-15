@@ -5,6 +5,6 @@
     },
     "rendering" : {
         "technique" : "raster",
-        "source" : "RainstormFont.image"
+        "texture" : "Rainstorm.texture"
     }
 }

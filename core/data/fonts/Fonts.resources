@@ -5,8 +5,13 @@
         "file" : "Rainstorm.font"
     },
     {
-        "name" : "RainstormFont.image",
+        "name" : "Rainstorm.image",
         "type" : "image",
         "file" : "Rainstorm.png"
+    },
+    {
+        "name" : "Rainstorm.texture",
+        "type" : "texture",
+        "file" : "Rainstorm.texture"
     }
 ]

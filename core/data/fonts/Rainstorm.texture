@@ -1,0 +1,7 @@
+{
+    "image" : "Rainstorm.image",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "clampToEdge",
+    "wrapY" : "clampToEdge"
+}
