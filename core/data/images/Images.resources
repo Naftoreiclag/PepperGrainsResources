@@ -31,61 +31,15 @@
         "type" : "image",
         "file" : "WeirdAlpha.png",
         "params" : {
-            "distanceFild" : {
+            "distanceField" : {
                 "absolute" : true,
                 "width" : 128,
                 "height" : 128,
-                "range" : 20,
-                "pass" : 0.5
+                "inside" : 20,
+                "outside" : 20,
+                "edgeValue" : 0.5,
+                "channel" : 3
             }
-        }
-    },
-    {
-        "name" : "RoseBud-mask.image",
-        "type" : "image",
-        "file" : "WeirdAlpha.png",
-        "params" : {
-            "alphaCleave" : "mask"
-        }
-    },
-    {
-        "name" : "RoseBud-premultiply.image",
-        "type" : "image",
-        "file" : "WeirdAlpha.png",
-        "params" : {
-            "alphaCleave" : "premultiply"
-        }
-    },
-    {
-        "name" : "RoseBud-lazy.image",
-        "type" : "image",
-        "file" : "WeirdAlpha.png",
-        "params" : {
-            "alphaCleave" : "lazy"
-        }
-    },
-    {
-        "name" : "RoseBud-shellhq.image",
-        "type" : "image",
-        "file" : "WeirdAlpha.png",
-        "params" : {
-            "alphaCleave" : "shellhq"
-        }
-    },
-    {
-        "name" : "ExpensiveResource2.image",
-        "type" : "image",
-        "file" : "ExpensiveResource.png",
-        "params" : {
-            "alphaCleave" : "shellhq"
-        }
-    },
-    {
-        "name" : "ExpensiveResource3.image",
-        "type" : "image",
-        "file" : "ExpensiveResource.png",
-        "params" : {
-            "alphaCleave" : "clamp"
         }
     }
 ]
