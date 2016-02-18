@@ -1,0 +1,5 @@
+Pepper Grains Dependencies and Media
+---
+This repository contains the additional files needed by the Pepper Grains project.
+- /dependencies/ contains multiple open-source libraries that are compiled and linked statically by Pepper Grains. See subdirectories for individual licensing information.
+- /core/ contains the project file for all media loaded at runtime by Pepper Grains.
