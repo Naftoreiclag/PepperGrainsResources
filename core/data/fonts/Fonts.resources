@@ -13,5 +13,21 @@
         "name" : "Rainstorm.texture",
         "type" : "texture",
         "file" : "Rainstorm.texture"
-    }
+    },
+    {
+        "name" : "RainstormDF1.image",
+        "type" : "image",
+        "file" : "Rainstorm2048.png",
+        "params" : {
+            "distanceField" : {
+                "width" : 512,
+                "height" : 512,
+                "inside" : 0.0625,
+                "outside" : 0.0625,
+                "edgeValue" : 0.5,
+                "channel" : 0,
+                "fontMode" : true
+            }
+        }
+    },
 ]

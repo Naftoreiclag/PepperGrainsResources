@@ -35,8 +35,8 @@
                 "absolute" : true,
                 "width" : 128,
                 "height" : 128,
-                "inside" : 20,
-                "outside" : 20,
+                "inside" : 0.1,
+                "outside" : 0.1,
                 "edgeValue" : 0.5,
                 "channel" : 3
             }
