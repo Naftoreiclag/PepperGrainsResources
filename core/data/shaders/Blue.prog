@@ -1,0 +1,16 @@
+{
+    "link" : [
+        "Blue.vertexShader",
+        "Blue.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "position",
+        "uv" : "texCoord"
+    },
+    "controls" : {
+        "sampler2D" : [
+            "screenTex"
+        ]
+    },
+    "fragOutput" : "fragColor"
+}
