@@ -12,5 +12,7 @@
             "screenTex"
         ]
     },
-    "fragOutput" : "fragColor"
+    "output" : {
+        "color" : "fragColor"
+    }
 }

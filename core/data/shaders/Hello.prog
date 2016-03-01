@@ -18,5 +18,7 @@
             "ambientTex"
         ]
     },
-    "fragOutput" : "fragColor"
+    "output" : {
+        "color" : "fragColor"
+    }
 }

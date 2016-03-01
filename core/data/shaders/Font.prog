@@ -17,5 +17,7 @@
             "image"
         ]
     },
-    "fragOutput" : "fragColor"
+    "output" : {
+        "color" : "fragColor"
+    }
 }

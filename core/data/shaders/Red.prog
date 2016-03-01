@@ -11,5 +11,7 @@
         "view" : "uView",
         "proj" : "uProj"
     },
-    "fragOutput" : "fragColor"
+    "output" : {
+        "color" : "fragColor"
+    }
 }
