@@ -5,7 +5,6 @@
     ],
     "attributes" : {
         "position" : "position",
-        "color" : "color",
         "uv" : "texCoord"
     },
     "matrices" : {
@@ -19,6 +18,7 @@
         ]
     },
     "output" : {
-        "color" : "fragColor"
+        "color" : "fragColor",
+        "normal" : "fragNormal"
     }
 }
