@@ -4,8 +4,9 @@
         "Hello.fragmentShader"
     ],
     "attributes" : {
-        "position" : "position",
-        "uv" : "texCoord"
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
     },
     "matrices" : {
         "model" : "uModel",
@@ -18,7 +19,7 @@
         ]
     },
     "output" : {
-        "color" : "fragColor",
-        "normal" : "fragNormal"
+        "color" : "fColor",
+        "normal" : "fNormal"
     }
 }

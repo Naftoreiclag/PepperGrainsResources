@@ -1,12 +1,12 @@
 #version 330
-in vec2 vertTexCoord;
+in vec2 vUV;
 
 uniform sampler2D ambientTex;
 
-out vec3 fragColor;
-out vec3 fragNormal;
+out vec3 fColor;
+out vec3 fNormal;
 
 void main() {
-    fragColor = texture(ambientTex, vertTexCoord).rgb;
-    fragNormal = vec3(0.0, 1.0, 0.0);
+    fColor = texture(ambientTex, vUV).rgb;
+    fNormal = vec3(0.0, 1.0, 0.0);
 }
