@@ -1,10 +1,10 @@
 #version 330
-in vec2 position;
-in vec2 texCoord;
+in vec2 iPosition;
+in vec2 iUV;
 
-out vec2 vertTexCoord;
+out vec2 vUV;
 
 void main() {
-    vertTexCoord = texCoord;
-    gl_Position = vec4(position, 0.0, 1.0);
+    vUV = iUV;
+    gl_Position = vec4(iPosition, 0.0, 1.0);
 }

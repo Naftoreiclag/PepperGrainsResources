@@ -4,12 +4,14 @@
         "GBuffer.fragmentShader"
     ],
     "attributes" : {
-        "position" : "position",
-        "uv" : "texCoord"
+        "position" : "iPosition",
+        "uv" : "iUV"
     },
     "controls" : {
         "sampler2D" : {
-            "diffuse" : "gDiffuse"
+            "diffuse" : "gDiffuse",
+            "normal" : "gNormal",
+            "position" : "gPosition"
         }
     },
     "output" : {
