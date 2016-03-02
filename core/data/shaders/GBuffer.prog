@@ -1,0 +1,18 @@
+{
+    "link" : [
+        "GBuffer.vertexShader",
+        "GBuffer.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "position",
+        "uv" : "texCoord"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuse" : "gDiffuse"
+        }
+    },
+    "output" : {
+        "color" : "fragColor"
+    }
+}
