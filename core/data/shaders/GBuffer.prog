@@ -15,6 +15,6 @@
         }
     },
     "output" : {
-        "color" : "fragColor"
+        "color" : "oColor"
     }
 }
