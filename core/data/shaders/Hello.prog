@@ -19,7 +19,7 @@
         }
     },
     "output" : {
-        "color" : "fColor",
+        "diffuse" : "fColor",
         "normal" : "fNormal",
         "position" : "fPosition"
     }
