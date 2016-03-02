@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "SmoothTorus.geometry",
+            "material" : "GrnJelly.material"
+        }
+    ]
+}

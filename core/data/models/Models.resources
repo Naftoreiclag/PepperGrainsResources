@@ -18,5 +18,10 @@
         "name" : "JellyUFO.model",
         "type" : "model",
         "file" : "JellyUFO.model"
+    },
+    {
+        "name" : "JellySmoothTorus.model",
+        "type" : "model",
+        "file" : "JellySmoothTorus.model"
     }
 ]

@@ -9,5 +9,10 @@
         "name" : "UFO.geometry",
         "type" : "geometry",
         "file" : "UFO.fbx"
+    },
+    {
+        "name" : "SmoothTorus.geometry",
+        "type" : "geometry",
+        "file" : "SmoothTorus.fbx"
     }
 ]
