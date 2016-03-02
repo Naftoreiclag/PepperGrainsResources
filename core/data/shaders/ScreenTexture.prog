@@ -8,9 +8,9 @@
         "uv" : "texCoord"
     },
     "controls" : {
-        "sampler2D" : [
-            "screenTex"
-        ]
+        "sampler2D" : {
+            "screenTex" : "screenTex"
+        }
     },
     "output" : {
         "color" : "fragColor"

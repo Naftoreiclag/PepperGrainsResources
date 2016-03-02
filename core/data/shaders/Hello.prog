@@ -14,12 +14,13 @@
         "proj" : "uProj"
     },
     "controls" : {
-        "sampler2D" : [
-            "ambientTex"
-        ]
+        "sampler2D" : {
+            "ambientTex" : "ambientTex"
+        }
     },
     "output" : {
         "color" : "fColor",
-        "normal" : "fNormal"
+        "normal" : "fNormal",
+        "position" : "fPosition"
     }
 }

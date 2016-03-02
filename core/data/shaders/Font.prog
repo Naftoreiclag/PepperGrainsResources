@@ -13,9 +13,9 @@
         "proj" : "uProj"
     },
     "controls" : {
-        "sampler2D" : [
-            "image"
-        ]
+        "sampler2D" : {
+            "image" : "image"
+        }
     },
     "output" : {
         "color" : "fragColor"
