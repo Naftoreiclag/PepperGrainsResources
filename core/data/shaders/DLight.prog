@@ -1,0 +1,17 @@
+{
+    "link" : [
+        "DLight.vertexShader",
+        "DLight.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "proj" : "uProj"
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}
