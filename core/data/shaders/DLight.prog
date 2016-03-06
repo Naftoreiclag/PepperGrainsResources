@@ -6,10 +6,12 @@
     "attributes" : {
         "position" : "iPosition"
     },
-    "matrices" : {
-        "model" : "uModel",
-        "view" : "uView",
-        "proj" : "uProj"
+    "controls" : {
+        "sampler2D" : {
+            "diffuse" : "gDiffuse",
+            "normal" : "gNormal",
+            "position" : "gPosition"
+        }
     },
     "output" : {
         "color" : "fColor"
