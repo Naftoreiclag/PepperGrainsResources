@@ -9,8 +9,7 @@
     "controls" : {
         "sampler2D" : {
             "diffuse" : "gDiffuse",
-            "normal" : "gNormal",
-            "position" : "gPosition"
+            "normal" : "gNormal"
         }
     },
     "output" : {
