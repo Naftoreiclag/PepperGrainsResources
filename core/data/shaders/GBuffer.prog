@@ -8,13 +8,15 @@
         "uv" : "iUV"
     },
     "matrices" : {
-        "inverseViewProjection" : "uInvViewProj"
+        "inverseViewProjection" : "uInvViewProj",
+        "sunViewProjection" : "uSunViewProj"
     },
     "controls" : {
         "sampler2D" : {
             "diffuse" : "gDiffuse",
             "normal" : "gNormal",
-            "depth" : "gDepth"
+            "depth" : "gDepth",
+            "sunDepth" : "gSunDepth"
         }
     },
     "output" : {

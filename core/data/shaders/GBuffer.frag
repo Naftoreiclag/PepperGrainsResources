@@ -7,7 +7,10 @@ uniform sampler2D gDiffuse;
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
 
+uniform sampler2D gSunDepth;
+
 uniform mat4 uInvViewProj;
+uniform mat4 uSunViewProj;
 
 void main() {
     vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
