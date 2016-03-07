@@ -7,11 +7,15 @@
         "position" : "iPosition",
         "uv" : "iUV"
     },
+    "matrices" : {
+        "inverseViewProjection" : "uInvViewProj"
+    },
     "controls" : {
         "sampler2D" : {
             "diffuse" : "gDiffuse",
             "normal" : "gNormal",
-            "position" : "gPosition"
+            "position" : "gPosition",
+            "depth" : "gDepth"
         }
     },
     "output" : {

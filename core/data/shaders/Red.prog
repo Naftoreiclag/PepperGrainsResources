@@ -9,7 +9,7 @@
     "matrices" : {
         "model" : "uModel",
         "view" : "uView",
-        "proj" : "uProj"
+        "projection" : "uProj"
     },
     "output" : {
         "color" : "fragColor"
