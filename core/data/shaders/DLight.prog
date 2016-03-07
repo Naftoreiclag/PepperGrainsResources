@@ -13,6 +13,6 @@
         }
     },
     "output" : {
-        "color" : "fColor"
+        "bright" : "fBright"
     }
 }
