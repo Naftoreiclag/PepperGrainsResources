@@ -31,8 +31,10 @@ void main() {
     }
     //oColor = fDiffuse * intense;
     //oColor = texture(gSunDepth, vUV).xyz;
-    //oColor = vec3(fPositionInSun, fPositionInSun, fPositionInSun);
+    //oColor = vec3(fPositionInSun.z, fPositionInSun.z, fPositionInSun.z);
     oColor = vec3(fNearestDist, fNearestDist, fNearestDist);
+    //oColor = vec3(fPositionInSun.xy, 0.0);
     //oColor = fPositionInSun.xyz;
+    //oColor = vec3(fPosition.w, fPosition.w, fPosition.w);
     // * max(dot(fNormal, lightDir), 0.0);
 }
