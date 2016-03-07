@@ -1,0 +1,7 @@
+{
+    "image" : "Slime.image",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "repeat",
+    "wrapY" : "repeat"
+}

@@ -5,6 +5,11 @@
         "file" : "GrnJelly.texture"
     },
     {
+        "name" : "Slime.texture",
+        "type" : "texture",
+        "file" : "Slime.texture"
+    },
+    {
         "name" : "128Rose.texture",
         "type" : "texture",
         "file" : "128Rose.texture"

@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "TestPlane.geometry",
+            "material" : "Slime.material"
+        }
+    ]
+}

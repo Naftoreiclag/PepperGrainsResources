@@ -14,5 +14,10 @@
         "name" : "SmoothTorus.geometry",
         "type" : "geometry",
         "file" : "SmoothTorus.fbx"
+    },
+    {
+        "name" : "TestPlane.geometry",
+        "type" : "geometry",
+        "file" : "20Plane.fbx"
     }
 ]

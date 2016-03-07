@@ -5,6 +5,11 @@
         "file" : "GrnJelly.png"
     },
     {
+        "name" : "Slime.image",
+        "type" : "image",
+        "file" : "Slime.jpg"
+    },
+    {
         "name" : "PurpleJellyfish.image",
         "type" : "image",
         "file" : "PrplJelly.jpeg"

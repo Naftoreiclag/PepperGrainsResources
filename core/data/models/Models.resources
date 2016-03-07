@@ -23,5 +23,10 @@
         "name" : "JellySmoothTorus.model",
         "type" : "model",
         "file" : "JellySmoothTorus.model"
+    },
+    {
+        "name" : "TestPlane.model",
+        "type" : "model",
+        "file" : "TestPlane.model"
     }
 ]
