@@ -19,7 +19,7 @@ void main() {
     // Direction to directional light
     vec3 lightDir = vec3(0.0, 1.0, 0.0);
     
-    oColor = fPosition.xyz;
+    oColor = fDiffuse;
     
     // * max(dot(fNormal, lightDir), 0.0);
 }
