@@ -20,7 +20,6 @@
     },
     "output" : {
         "diffuse" : "fColor",
-        "normal" : "fNormal",
-        "position" : "fPosition"
+        "normal" : "fNormal"
     }
 }
