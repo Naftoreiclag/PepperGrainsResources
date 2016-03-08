@@ -17,24 +17,15 @@ void main() {
     vec3 fNormal = texture(gNormal, vUV).xyz;
     float fDepth = texture(gDepth, vUV).x;
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
-    fPosition /= fPosition.w;
+    fPosition /= fPosition.w; // perspective divide
     
     vec4 fPositionInSun = uSunViewProj * fPosition;
-    float fNearestDist = texture(gSunDepth, fPositionInSun.xy * 0.5 + 0.5).x;
+    fPositionInSun /= fPositionInSun.w;
+    fPositionInSun = fPositionInSun * 0.5 + 0.5; 
+    float smallestDistance = texture(gSunDepth, fPositionInSun.xy).x;
+    float myDistance = fPositionInSun.z;
     
-    // Direction to directional light
-    vec3 lightDir = vec3(0.0, 1.0, 0.0);
+    float shade = myDistance > smallestDistance ? 0.5 : 1.0;
     
-    float intense = 1.0f;
-    if(fNearestDist < fPositionInSun.z) {
-        intense = 0.5f;
-    }
-    //oColor = fDiffuse * intense;
-    //oColor = texture(gSunDepth, vUV).xyz;
-    //oColor = vec3(fPositionInSun.z, fPositionInSun.z, fPositionInSun.z);
-    oColor = vec3(fNearestDist, fNearestDist, fNearestDist);
-    //oColor = vec3(fPositionInSun.xy, 0.0);
-    //oColor = fPositionInSun.xyz;
-    //oColor = vec3(fPosition.w, fPosition.w, fPosition.w);
-    // * max(dot(fNormal, lightDir), 0.0);
+    oColor = fDiffuse * shade;
 }
