@@ -25,7 +25,8 @@ void main() {
     float smallestDistance = texture(gSunDepth, fPositionInSun.xy).x;
     float myDistance = fPositionInSun.z;
     
-    float shade = myDistance > smallestDistance ? 0.5 : 1.0;
+    float shadeBias = max(0.04 * (1.0 - dot(fNormal, vec3(-0.5774, -0.5774, -0.5774))), 0.004);
+    float shade = myDistance - shadeBias > smallestDistance ? 0.5 : 1.0;
     
     oColor = fDiffuse * shade;
 }
