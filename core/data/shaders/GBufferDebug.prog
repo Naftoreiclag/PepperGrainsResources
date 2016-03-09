@@ -1,0 +1,26 @@
+{
+    "link" : [
+        "GBufferDebug.vertexShader",
+        "GBufferDebug.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "uv" : "iUV"
+    },
+    "matrices" : {
+        "inverseViewProjection" : "uInvViewProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuse" : "gDiffuse",
+            "normal" : "gNormal",
+            "depth" : "gDepth"
+        },
+        "vec4" : {
+            "showWhat" : "uShowWhat"
+        }
+    },
+    "output" : {
+        "color" : "oColor"
+    }
+}
