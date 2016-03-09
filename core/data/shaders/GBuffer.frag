@@ -8,6 +8,7 @@ uniform sampler2D gNormal;
 uniform sampler2D gDepth;
 
 uniform sampler2D gSunDepth;
+uniform vec3 sunDir;
 
 uniform mat4 uInvViewProj;
 uniform mat4 uSunViewProj;
@@ -24,7 +25,9 @@ void main() {
     fPositionInSun = fPositionInSun * 0.5 + 0.5; 
     float myDistance = fPositionInSun.z;
     
-    float shadeBias = max(0.04 * (1.0 - dot(fNormal, vec3(-0.5774, -0.5774, -0.5774))), 0.004);
+    //vec3 sunDir = vec3(-0.5774, -0.5774, -0.5774);
+    
+    float shadeBias = max(0.01 * (1.0 - dot(fNormal, sunDir)), 0.005);
     
     // One sample
     /*

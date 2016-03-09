@@ -17,6 +17,9 @@
             "normal" : "gNormal",
             "depth" : "gDepth",
             "sunDepth" : "gSunDepth"
+        },
+        "vec3" : {
+            "sunDirection" : "sunDir"
         }
     },
     "output" : {
