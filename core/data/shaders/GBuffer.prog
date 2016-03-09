@@ -19,7 +19,7 @@
             "sunDepth" : "gSunDepth"
         },
         "vec3" : {
-            "sunDirection" : "sunDir"
+            "sunDirection" : "uSunDir"
         }
     },
     "output" : {
