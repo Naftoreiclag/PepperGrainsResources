@@ -18,7 +18,7 @@
         "name" : "128Rose.image",
         "type" : "image",
         "file" : "512Rose.jpg",
-        "params" : {
+        "parameters" : {
             "resize" : {
                 "absolute" : true,
                 "width" : 128,
@@ -35,7 +35,7 @@
         "name" : "RoseBud-distanceField.image",
         "type" : "image",
         "file" : "WeirdAlpha.png",
-        "params" : {
+        "parameters" : {
             "distanceField" : {
                 "absolute" : true,
                 "width" : 128,
