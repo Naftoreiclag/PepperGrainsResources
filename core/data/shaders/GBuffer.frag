@@ -25,6 +25,9 @@ void main() {
     fPositionInSun = fPositionInSun * 0.5 + 0.5; 
     float myDistance = fPositionInSun.z;
     
+    // Temporary "solution" for regions outside of sun buffer
+    myDistance = min(myDistance, 1.0);
+    
     float shadeBias = max(0.01 * (1.0 - dot(fNormal, uSunDir)), 0.005);
     
     
@@ -45,8 +48,8 @@ void main() {
     }
     isInDirectSunlight /= 9.0;
     
-    vec3 sunColor = vec3(0.8, 0.8, 0.8);
-    vec3 ambientBright = vec3(0.2, 0.2, 0.2);
+    vec3 sunColor = vec3(0.7, 0.7, 0.7);
+    vec3 ambientBright = vec3(0.3, 0.3, 0.3);
     vec3 totalBright = (sunColor * min(isInDirectSunlight, max(dot(fNormal, -uSunDir), 0.0))) + ambientBright;
     
     oColor = fDiffuse * totalBright;
