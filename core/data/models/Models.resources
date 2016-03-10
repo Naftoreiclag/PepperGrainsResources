@@ -28,5 +28,15 @@
         "name" : "TestPlane.model",
         "type" : "model",
         "file" : "TestPlane.model"
+    },
+    {
+        "name" : "WrinkledPlane.model",
+        "type" : "model",
+        "file" : "WrinkledPlane.model"
+    },
+    {
+        "name" : "Hills.model",
+        "type" : "model",
+        "file" : "Hills.model"
     }
 ]

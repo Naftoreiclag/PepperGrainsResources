@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "Hills.geometry",
+            "material" : "Slime.material"
+        }
+    ]
+}

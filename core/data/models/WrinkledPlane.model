@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "WrinkledPlane.geometry",
+            "material" : "Slime.material"
+        }
+    ]
+}

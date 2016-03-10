@@ -1,11 +1,5 @@
 [
     {
-        "name" : "Cube.geometry",
-        "type" : "geometry",
-        "file" : "Cube.fbx",
-        "track" : "Cube.mtl"
-    },
-    {
         "name" : "UFO.geometry",
         "type" : "geometry",
         "file" : "UFO.fbx"
@@ -19,5 +13,15 @@
         "name" : "TestPlane.geometry",
         "type" : "geometry",
         "file" : "20Plane.fbx"
+    },
+    {
+        "name" : "WrinkledPlane.geometry",
+        "type" : "geometry",
+        "file" : "WrinkledPlane.fbx"
+    },
+    {
+        "name" : "Hills.geometry",
+        "type" : "geometry",
+        "file" : "Hills.fbx"
     }
 ]
