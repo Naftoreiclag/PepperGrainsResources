@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "Hello.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "Hello.vert"
+    },
+    {
+        "name" : "Hello.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "Hello.frag"
+    },
+    {
+        "name" : "Hello.shaderProgram",
+        "type" : "shader-program",
+        "file" : "Hello.prog"
+    }
+]
