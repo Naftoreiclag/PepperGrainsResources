@@ -5,6 +5,11 @@
         "file" : "RoseCube.model"
     },
     {
+        "name" : "NormalMapTestCube.model",
+        "type" : "model",
+        "file" : "NormalMapTestCube.model"
+    },
+    {
         "name" : "JellyCube.model",
         "type" : "model",
         "file" : "JellyCube.model"

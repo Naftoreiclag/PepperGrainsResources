@@ -1,0 +1,28 @@
+{
+    "link" : [
+        "Hello.vertexShader",
+        "Hello.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV",
+        "tangent" : "iTangent",
+        "bitangent" : "iBitangent"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "projection" : "uProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuseMap" : "uDiffuseMap",
+            "normalMap" : "uNormalMap"
+        }
+    },
+    "output" : {
+        "diffuse" : "fDiffuse",
+        "normal" : "fNormal"
+    }
+}

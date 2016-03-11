@@ -5,6 +5,11 @@
         "file" : "128Rose.material"
     },
     {
+        "name" : "NormalMapTest.material",
+        "type" : "material",
+        "file" : "NormalMapTest.material"
+    },
+    {
         "name" : "Slime.material",
         "type" : "material",
         "file" : "Slime.material"
