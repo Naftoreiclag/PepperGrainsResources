@@ -1,7 +1,7 @@
 {
     "link" : [
-        "Hello.vertexShader",
-        "Hello.fragmentShader"
+        "TestNormalMap.vertexShader",
+        "TestNormalMap.fragmentShader"
     ],
     "attributes" : {
         "position" : "iPosition",

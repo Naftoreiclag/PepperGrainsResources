@@ -5,10 +5,9 @@ in vec2 iUV;
 in vec3 iTangent;
 in vec3 iBitangent;
 
-out vec3 vNormal;
+out vec3 vPosition;
 out vec2 vUV;
-out vec3 vTangent;
-out vec3 vBitangent;
+out mat3 vTBN;
 
 uniform mat4 uModel;
 uniform mat4 uView;
@@ -16,9 +15,13 @@ uniform mat4 uProj;
 
 void main() {
     gl_Position = uProj * uView * uModel * vec4(iPosition, 1.0);
-    vUV = iUV;
-    vNormal = (uModel * vec4(iNormal, 0.0)).xyz;
     vPosition = (uModel * vec4(iPosition, 1.0)).xyz;
-    vTangent = iTangent;
-    vBitangent = iBitangent;
+    
+    vUV = iUV;
+    
+    vec3 vTangent = normalize((uModel * vec4(iTangent, 0.0)).xyz);
+    vec3 vBitangent = normalize((uModel * vec4(iBitangent, 0.0)).xyz);
+    vec3 vNormal = normalize((uModel * vec4(iNormal, 0.0)).xyz);
+    
+    vTBN = mat3(vTangent, vBitangent, vNormal);
 }

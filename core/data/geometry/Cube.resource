@@ -4,6 +4,9 @@
         "type" : "geometry",
         "file" : "Cube.fbx",
         "parameters" : {
+            "uvs" : {
+                "flip" : true
+            },
             "tangents" : {
                 "generate" : true
             },
