@@ -1,5 +1,6 @@
 {
     "image" : "128Rose.image",
+    "internalFormat" : "SRGB",
     "minFilter" : "linear",
     "magFilter" : "linear",
     "wrapX" : "clampToEdge",

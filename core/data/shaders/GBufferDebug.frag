@@ -18,6 +18,9 @@ void main() {
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
     fPosition /= fPosition.w; // perspective divide
     
+    // Gamma correction
+    fDiffuse = pow(fDiffuse, vec3(1.0 / 2.2));
+    
     oColor = (
         fDiffuse * uShowWhat.x + 
         fNormal * uShowWhat.y + 

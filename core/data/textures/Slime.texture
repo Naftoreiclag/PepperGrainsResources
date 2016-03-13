@@ -1,5 +1,6 @@
 {
     "image" : "Slime.image",
+    "internalFormat" : "SRGB",
     "minFilter" : "linear",
     "magFilter" : "linear",
     "wrapX" : "repeat",

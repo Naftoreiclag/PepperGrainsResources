@@ -48,10 +48,14 @@ void main() {
     }
     isInDirectSunlight /= 9.0;
     
-    vec3 sunColor = vec3(0.7, 0.7, 0.7);
-    vec3 ambientBright = vec3(0.3, 0.3, 0.3);
+    vec3 sunColor = vec3(2.0, 2.0, 2.0);
+    vec3 ambientBright = vec3(0.2, 0.2, 0.2);
     vec3 totalBright = (sunColor * min(isInDirectSunlight, max(dot(fNormal, -uSunDir), 0.0))) + ambientBright;
     
     oColor = fDiffuse * totalBright;
+    // Tone mapping
+    oColor = oColor / (oColor + vec3(1.0));
+    // Gamma correction
+    oColor = pow(oColor, vec3(1.0 / 2.2));
     
 }
