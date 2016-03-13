@@ -4,6 +4,7 @@
         "type" : "geometry",
         "file" : "Cube.fbx",
         "parameters" : {
+            "pretransform" : true,
             "uvs" : {
                 "flip" : true
             },

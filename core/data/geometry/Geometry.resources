@@ -2,26 +2,86 @@
     {
         "name" : "UFO.geometry",
         "type" : "geometry",
-        "file" : "UFO.fbx"
+        "file" : "UFO.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     },
     {
         "name" : "SmoothTorus.geometry",
         "type" : "geometry",
-        "file" : "SmoothTorus.fbx"
+        "file" : "SmoothTorus.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     },
     {
         "name" : "TestPlane.geometry",
         "type" : "geometry",
-        "file" : "20Plane.fbx"
+        "file" : "20Plane.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     },
     {
         "name" : "WrinkledPlane.geometry",
         "type" : "geometry",
-        "file" : "WrinkledPlane.fbx"
+        "file" : "WrinkledPlane.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     },
     {
         "name" : "Hills.geometry",
         "type" : "geometry",
-        "file" : "Hills.fbx"
+        "file" : "Hills.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     }
 ]
