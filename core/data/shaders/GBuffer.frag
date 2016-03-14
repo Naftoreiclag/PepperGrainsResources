@@ -46,11 +46,11 @@ void main() {
             isInDirectSunlight += myDistance - shadeBias > smallestDistance ? 0.0 : 1.0;
         }
     }
-    isInDirectSunlight /= 9.0;
+    isInDirectSunlight /= 9;
     
     vec3 sunColor = vec3(2.0, 2.0, 2.0);
     vec3 ambientBright = vec3(0.2, 0.2, 0.2);
-    vec3 totalBright = (sunColor * min(isInDirectSunlight, max(dot(fNormal, -uSunDir), 0.0))) + ambientBright;
+    vec3 totalBright = (sunColor * clamp(dot(fNormal, -uSunDir), 0.0, isInDirectSunlight)) + ambientBright;
     
     oColor = fDiffuse * totalBright;
     // Tone mapping
