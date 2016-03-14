@@ -1,5 +1,13 @@
 [
     {
+        "name" : "HeightmapWheat.image",
+        "type" : "image",
+        "file" : "HeightmapWheat.png",
+        "parameters" : {
+            "limitComponents" : 1
+        }
+    },
+    {
         "name" : "NormalMapTest.image",
         "type" : "image",
         "file" : "NormalMapTest.png",
