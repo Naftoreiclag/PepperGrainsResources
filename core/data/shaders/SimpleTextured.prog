@@ -1,7 +1,7 @@
 {
     "link" : [
-        "Hello.vertexShader",
-        "Hello.fragmentShader"
+        "SimpleTextured.vertexShader",
+        "SimpleTextured.fragmentShader"
     ],
     "attributes" : {
         "position" : "iPosition",
@@ -15,7 +15,7 @@
     },
     "controls" : {
         "sampler2D" : {
-            "ambientTex" : "ambientTex"
+            "diffuseMap" : "diffuseMap"
         }
     },
     "output" : {
