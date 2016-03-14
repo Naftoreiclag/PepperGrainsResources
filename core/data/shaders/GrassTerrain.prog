@@ -1,0 +1,24 @@
+{
+    "link" : [
+        "GrassTerrain.vertexShader",
+        "GrassTerrain.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "projection" : "uProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuseMap" : "diffuseMap"
+        }
+    },
+    "output" : {
+        "diffuse" : "fColor",
+        "normal" : "fNormal"
+    }
+}
