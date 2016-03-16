@@ -1,0 +1,8 @@
+{
+    "image" : "Hatch.image",
+    "internalFormat" : "SRGB",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "repeat",
+    "wrapY" : "repeat"
+}

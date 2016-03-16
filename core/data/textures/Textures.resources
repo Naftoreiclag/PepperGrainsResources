@@ -1,5 +1,15 @@
 [
     {
+        "name" : "DoorNormals.texture",
+        "type" : "texture",
+        "file" : "DoorNormals.texture"
+    },
+    {
+        "name" : "Hatch.texture",
+        "type" : "texture",
+        "file" : "Hatch.texture"
+    },
+    {
         "name" : "GrnJelly.texture",
         "type" : "texture",
         "file" : "GrnJelly.texture"
