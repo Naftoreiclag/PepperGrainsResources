@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "Door.geometry",
+            "material" : "Hatch.material"
+        }
+    ]
+}

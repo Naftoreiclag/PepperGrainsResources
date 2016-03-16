@@ -1,5 +1,10 @@
 [
     {
+        "name" : "Hatch.material",
+        "type" : "material",
+        "file" : "Hatch.material"
+    },
+    {
         "name" : "Turf.material",
         "type" : "material",
         "file" : "Turf.material"

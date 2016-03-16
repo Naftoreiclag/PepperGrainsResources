@@ -5,6 +5,11 @@
         "file" : "RoseCube.model"
     },
     {
+        "name" : "Door.model",
+        "type" : "model",
+        "file" : "Door.model"
+    },
+    {
         "name" : "NormalMapTestCube.model",
         "type" : "model",
         "file" : "NormalMapTestCube.model"

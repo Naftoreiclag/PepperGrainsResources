@@ -1,5 +1,39 @@
 [
     {
+        "name" : "GrassBlade.geometry",
+        "type" : "geometry",
+        "file" : "GrassBlade.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "Door.geometry",
+        "type" : "geometry",
+        "file" : "Door.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
         "name" : "UFO.geometry",
         "type" : "geometry",
         "file" : "UFO.fbx",

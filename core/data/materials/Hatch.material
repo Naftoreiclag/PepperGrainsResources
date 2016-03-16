@@ -1,0 +1,7 @@
+{
+    "shaderProgram" : "TestNormalMap.shaderProgram",
+    "sampler2D" : {
+        "diffuseMap" : "Hatch.texture",
+        "normalMap" : "DoorNormals.texture"
+    }
+}

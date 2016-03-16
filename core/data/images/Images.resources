@@ -8,6 +8,14 @@
         }
     },
     {
+        "name" : "DoorNormals.image",
+        "type" : "image",
+        "file" : "DoorNormals.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
         "name" : "NormalMapTest.image",
         "type" : "image",
         "file" : "NormalMapTest.png",
@@ -19,6 +27,11 @@
         "name" : "GreenJellyfish.image",
         "type" : "image",
         "file" : "GrnJelly.png"
+    },
+    {
+        "name" : "Hatch.image",
+        "type" : "image",
+        "file" : "Hatch.jpg"
     },
     {
         "name" : "Slime.image",
