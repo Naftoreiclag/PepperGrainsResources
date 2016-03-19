@@ -23,7 +23,8 @@
     },
     "controls" : {
         "sampler2D" : {
-            "diffuseMap" : "diffuseMap"
+            "diffuseMap" : "diffuseMap",
+            "heightMap" : "heightMap"
         }
     },
     "output" : {

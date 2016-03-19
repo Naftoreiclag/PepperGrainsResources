@@ -16,7 +16,20 @@
             }
         }
     },
-        {
+    {
+        "name" : "GrassHeight.image",
+        "type" : "image",
+        "file" : "GrassHeight.png",
+        "parameters" : {
+            "limitComponents" : 1
+        }
+    },
+    {
+        "name" : "GrassHeight.texture",
+        "type" : "texture",
+        "file" : "GrassHeight.texture"
+    },
+    {
         "name" : "GrassBlade.vertexShader",
         "type" : "vertex-shader",
         "file" : "GrassBlade.vert"
