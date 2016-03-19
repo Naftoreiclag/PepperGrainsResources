@@ -1,6 +1,7 @@
 {
     "image" : "GreenJellyfish.image",
-    "internalFormat" : "SRGB",
+    "internalFormat" : "SRGB8",
+    "pixelFormat" : "RGB",
     "minFilter" : "nearest",
     "magFilter" : "nearest",
     "wrapX" : "clampToEdge",
