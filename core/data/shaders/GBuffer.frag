@@ -28,7 +28,7 @@ void main() {
     // Temporary "solution" for regions outside of sun buffer
     myDistance = min(myDistance, 1.0);
     
-    float shadeBias = max(0.01 * (1.0 - dot(fNormal, uSunDir)), 0.005);
+    float shadeBias = max(0.005 * (1.0 - dot(fNormal, uSunDir)), 0.0025);
     
     
     // One sample
@@ -49,7 +49,7 @@ void main() {
     isInDirectSunlight /= 9;
     
     // Remove shadows
-    isInDirectSunlight = 1.0;
+    //isInDirectSunlight = 1.0;
     
     vec3 sunColor = vec3(2.0, 2.0, 2.0);
     vec3 ambientBright = vec3(0.2, 0.2, 0.2);
