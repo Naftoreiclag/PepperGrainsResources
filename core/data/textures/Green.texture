@@ -1,5 +1,5 @@
 {
-    "image" : "BColorMap.image",
+    "image" : "Green.image",
     "internalFormat" : "SRGB8",
     "pixelFormat" : "RGB",
     "minFilter" : "linear",
