@@ -1,0 +1,34 @@
+[
+    {
+        "name" : "GrassBlade.geometry",
+        "type" : "geometry",
+        "file" : "GrassBlade.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+        {
+        "name" : "GrassBlade.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "GrassBlade.vert"
+    },
+    {
+        "name" : "GrassBlade.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "GrassBlade.frag"
+    },
+    {
+        "name" : "GrassBlade.shaderProgram",
+        "type" : "shader-program",
+        "file" : "GrassBlade.prog"
+    }
+]

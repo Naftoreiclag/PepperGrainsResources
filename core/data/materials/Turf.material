@@ -1,6 +1,6 @@
 {
     "shaderProgram" : "SimpleTextured.shaderProgram",
     "sampler2D" : {
-        "diffuseMap" : "Slime.texture"
+        "diffuseMap" : "Green.texture"
     }
 }

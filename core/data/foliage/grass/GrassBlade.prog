@@ -1,0 +1,32 @@
+{
+    "link" : [
+        "GrassBlade.vertexShader",
+        "GrassBlade.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "view" : "uView",
+        "projection" : "uProj"
+    },
+    "instancing" : {
+        "vec2" : {
+            "color" : "iColor"
+        },
+        "vec3" : {
+            "offset" : "iOffset"
+        }
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuseMap" : "diffuseMap"
+        }
+    },
+    "output" : {
+        "diffuse" : "fColor"
+    }
+}

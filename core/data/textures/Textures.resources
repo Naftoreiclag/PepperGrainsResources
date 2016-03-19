@@ -20,6 +20,11 @@
         "file" : "NormalMapTest.texture"
     },
     {
+        "name" : "Green.texture",
+        "type" : "texture",
+        "file" : "Green.texture"
+    },
+    {
         "name" : "Slime.texture",
         "type" : "texture",
         "file" : "Slime.texture"

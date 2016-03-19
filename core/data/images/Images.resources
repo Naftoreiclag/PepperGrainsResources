@@ -34,6 +34,11 @@
         "file" : "Hatch.jpg"
     },
     {
+        "name" : "Green.image",
+        "type" : "image",
+        "file" : "Green.png"
+    },
+    {
         "name" : "Slime.image",
         "type" : "image",
         "file" : "Slime.jpg"

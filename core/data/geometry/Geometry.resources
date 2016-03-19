@@ -1,22 +1,5 @@
 [
     {
-        "name" : "GrassBlade.geometry",
-        "type" : "geometry",
-        "file" : "GrassBlade.fbx",
-        "parameters" : {
-            "pretransform" : true,
-            "uvs" : {
-                "flip" : true
-            },
-            "tangents" : {
-                "generate" : true
-            },
-            "color" : {
-                "remove" : true
-            }
-        }
-    },
-    {
         "name" : "Door.geometry",
         "type" : "geometry",
         "file" : "Door.fbx",
@@ -70,7 +53,7 @@
     {
         "name" : "TestPlane.geometry",
         "type" : "geometry",
-        "file" : "32Plane.fbx",
+        "file" : "20Plane.fbx",
         "parameters" : {
             "pretransform" : true,
             "uvs" : {
