@@ -7,7 +7,7 @@ uniform sampler2D gDiffuse;
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
 
-uniform sampler2D gSunDepth;
+uniform sampler2DShadow gSunDepth;
 uniform vec3 uSunDir;
 
 uniform mat4 uInvViewProj;
@@ -23,30 +23,19 @@ void main() {
     vec4 fPositionInSun = uSunViewProj * fPosition;
     fPositionInSun /= fPositionInSun.w;
     fPositionInSun = fPositionInSun * 0.5 + 0.5; 
-    float myDistance = fPositionInSun.z;
-    
-    // Temporary "solution" for regions outside of sun buffer
-    myDistance = min(myDistance, 1.0);
     
     float shadeBias = max(0.005 * (1.0 - dot(fNormal, uSunDir)), 0.0025);
-    
-    
-    // One sample
-    /*
-    float smallestDistance = texture(gSunDepth, fPositionInSun.xy).x;
-    float isInDirectSunlight = myDistance - shadeBias > smallestDistance ? 0.0 : 1.0;
-    */
     
     // PCF
     float isInDirectSunlight = 0.0;
     vec2 texelDimensions = 1.0 / textureSize(gSunDepth, 0);
     for(int y = -1; y < 2; ++ y) {
         for(int x = -1; x < 2; ++ x) {
-            float smallestDistance = texture(gSunDepth, vec2(x, y) * texelDimensions + fPositionInSun.xy).x;
-            isInDirectSunlight += myDistance - shadeBias > smallestDistance ? 0.0 : 1.0;
+            isInDirectSunlight += texture(gSunDepth, vec3(vec2(x, y) * texelDimensions + fPositionInSun.xy, fPositionInSun.z - shadeBias));
         }
     }
     isInDirectSunlight /= 9;
+    
     
     // Remove shadows
     //isInDirectSunlight = 1.0;
