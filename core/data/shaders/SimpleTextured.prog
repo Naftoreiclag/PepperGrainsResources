@@ -10,8 +10,7 @@
     },
     "matrices" : {
         "model" : "uModel",
-        "view" : "uView",
-        "projection" : "uProj"
+        "viewProjection" : "uViewProj"
     },
     "controls" : {
         "sampler2D" : {
