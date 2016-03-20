@@ -10,7 +10,7 @@
     },
     "matrices" : {
         "model" : "uModel",
-        "viewProjection" : "uViewProj"
+        "modelViewProjection" : "uMVP"
     },
     "controls" : {
         "sampler2D" : {

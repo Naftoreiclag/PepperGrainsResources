@@ -7,10 +7,10 @@ out vec3 vNormal;
 out vec2 vUV;
 
 uniform mat4 uModel;
-uniform mat4 uViewProj;
+uniform mat4 uMVP;
 
 void main() {
-    gl_Position = uViewProj * uModel * vec4(iPosition, 1.0);
+    gl_Position = uMVP * vec4(iPosition, 1.0);
     vUV = iUV;
     vNormal = (uModel * vec4(iNormal, 0.0)).xyz;
 }
