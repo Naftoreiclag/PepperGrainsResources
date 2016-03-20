@@ -10,11 +10,10 @@ out vec2 vUV;
 out mat3 vTBN;
 
 uniform mat4 uModel;
-uniform mat4 uView;
-uniform mat4 uProj;
+uniform mat4 uViewProj;
 
 void main() {
-    gl_Position = uProj * uView * uModel * vec4(iPosition, 1.0);
+    gl_Position = uViewProj * uModel * vec4(iPosition, 1.0);
     vPosition = (uModel * vec4(iPosition, 1.0)).xyz;
     
     vUV = iUV;
