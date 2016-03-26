@@ -10,5 +10,6 @@ out vec3 fNormal;
 
 void main() {
     fColor = texture(diffuseMap, vColor).rgb;
+    fColor *= 1.0 - (vUV.y * 0.2);
     fNormal = vNormal;
 }
