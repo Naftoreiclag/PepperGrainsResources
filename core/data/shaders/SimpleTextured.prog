@@ -19,7 +19,6 @@
     },
     "output" : {
         "diffuse" : "fColor",
-        "normal" : "fNormal",
-        "bright" : "fBright"
+        "normal" : "fNormal"
     }
 }
