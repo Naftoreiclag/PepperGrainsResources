@@ -16,6 +16,7 @@
             "diffuse" : "gDiffuse",
             "normal" : "gNormal",
             "depth" : "gDepth",
+            "bright" : "gBright",
             "sunDepth" : "gSunDepth"
         },
         "vec3" : {

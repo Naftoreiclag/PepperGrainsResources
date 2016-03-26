@@ -6,6 +6,7 @@ out vec3 oColor;
 uniform sampler2D gDiffuse;
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
+uniform sampler2D gBright;
 
 uniform sampler2DShadow gSunDepth;
 uniform vec3 uSunDir;
@@ -24,7 +25,7 @@ void main() {
     fPositionInSun /= fPositionInSun.w;
     fPositionInSun = fPositionInSun * 0.5 + 0.5; 
     
-    float shadeBias = max(0.005 * (1.0 - dot(fNormal, uSunDir)), 0.0025);
+    float shadeBias = max(0.002 * (1.0 - dot(fNormal, uSunDir)), 0.001);
     
     // PCF
     float isInDirectSunlight = 0.0;
@@ -35,7 +36,6 @@ void main() {
         }
     }
     isInDirectSunlight /= 9;
-    
     
     // Remove shadows
     //isInDirectSunlight = 1.0;

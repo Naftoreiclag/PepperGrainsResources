@@ -1,0 +1,13 @@
+{
+    "link" : [
+        "GBufferDebugFill.vertexShader",
+        "GBufferDebugFill.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "uv" : "iUV"
+    },
+    "output" : {
+        "color" : "oColor"
+    }
+}

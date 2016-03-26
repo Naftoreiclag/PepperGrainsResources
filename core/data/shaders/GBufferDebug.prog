@@ -14,7 +14,8 @@
         "sampler2D" : {
             "diffuse" : "gDiffuse",
             "normal" : "gNormal",
-            "depth" : "gDepth"
+            "depth" : "gDepth",
+            "bright" : "gBright"
         },
         "vec4" : {
             "showWhat" : "uShowWhat"
