@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "PointLightVolume.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "PointLightVolume.vert"
+    },
+    {
+        "name" : "PointLightVolume.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "PointLightVolume.frag"
+    },
+    {
+        "name" : "PointLightVolume.shaderProgram",
+        "type" : "shader-program",
+        "file" : "PointLightVolume.prog"
+    }
+]

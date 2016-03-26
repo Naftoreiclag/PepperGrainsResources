@@ -1,0 +1,19 @@
+[
+    {
+        "name" : "PointLightVolume.geometry",
+        "type" : "geometry",
+        "file" : "Point.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "remove" : true
+            },
+            "normals" : {
+                "remove" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    }
+]

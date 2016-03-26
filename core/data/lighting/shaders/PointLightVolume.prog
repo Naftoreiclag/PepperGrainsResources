@@ -1,0 +1,23 @@
+{
+    "link" : [
+        "PointLightVolume.vertexShader",
+        "PointLightVolume.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP",
+        "inverseViewProjection" : "uInvViewProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "normal" : "gNormal",
+            "depth" : "gDepth"
+        }
+    },
+    "output" : {
+        "bright" : "fBright"
+    }
+}
