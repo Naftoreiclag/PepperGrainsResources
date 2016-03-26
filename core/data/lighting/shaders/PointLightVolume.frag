@@ -1,22 +1,17 @@
 #version 330
-out vec3 fBright;
-
-in vec2 vPotato;
-in vec4 vEgg;
+in vec4 vPosition;
 
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
 
 uniform mat4 uInvViewProj;
 
+out vec3 fBright;
+out vec3 fDiffuse;
+
 void main() {
-    vec2 vUV = gl_FragCoord.xy;
-    vUV /= gl_FragCoord.w;
-    vUV = (vUV + 1.0) / 2.0;
-    vUV = vPotato;
-    
-    vUV = vEgg.xy;
-    vUV /= vEgg.w;
+    vec2 vUV = vPosition.xy;
+    vUV /= vPosition.w;
     vUV = (vUV + 1.0) / 2.0;
 
     /*
@@ -26,5 +21,6 @@ void main() {
     fPosition /= fPosition.w; // perspective divide
     */
     
-    fBright = (texture(gNormal, vUV).xyz + 1.0) / 2.0;
+    fBright = texture(gNormal, vUV).xyz;
+    fDiffuse = vec3(0.0);
 }

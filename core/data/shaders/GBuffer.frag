@@ -17,6 +17,7 @@ uniform mat4 uSunViewProj;
 void main() {
     vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
     vec3 fNormal = texture(gNormal, vUV).xyz;
+    vec3 fBright = texture(gBright, vUV).xyz;
     float fDepth = texture(gDepth, vUV).x;
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
     fPosition /= fPosition.w; // perspective divide
@@ -43,6 +44,8 @@ void main() {
     vec3 sunColor = vec3(2.0, 2.0, 2.0);
     vec3 ambientBright = vec3(0.2, 0.2, 0.2);
     vec3 totalBright = (sunColor * clamp(dot(fNormal, -uSunDir), 0.0, isInDirectSunlight)) + ambientBright;
+    
+    totalBright += fBright;
     
     oColor = fDiffuse * totalBright;
     // Tone mapping

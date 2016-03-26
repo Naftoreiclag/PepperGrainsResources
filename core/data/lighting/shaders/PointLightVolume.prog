@@ -18,6 +18,7 @@
         }
     },
     "output" : {
+        "diffuse" : "fDiffuse",
         "bright" : "fBright"
     }
 }

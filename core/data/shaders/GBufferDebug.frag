@@ -23,7 +23,7 @@ void main() {
     */
     
     // Gamma correction
-    fDiffuse = pow(fDiffuse, vec3(1.0 / 2.2));
+    //fDiffuse = pow(fDiffuse, vec3(1.0 / 2.2));
     
     oColor = (
         fDiffuse * uShowWhat.x + 
