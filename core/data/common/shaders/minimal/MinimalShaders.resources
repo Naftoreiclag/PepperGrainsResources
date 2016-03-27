@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "MinimalWhite.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "MinimalWhite.vert"
+    },
+    {
+        "name" : "MinimalWhite.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "MinimalWhite.frag"
+    },
+    {
+        "name" : "MinimalWhite.shaderProgram",
+        "type" : "shader-program",
+        "file" : "MinimalWhite.prog"
+    }
+]
