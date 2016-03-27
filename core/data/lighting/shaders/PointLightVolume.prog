@@ -4,12 +4,18 @@
         "PointLightVolume.fragmentShader"
     ],
     "attributes" : {
-        "position" : "iPosition"
+        "position" : "iVertexPosition"
     },
     "matrices" : {
         "model" : "uModel",
-        "modelViewProjection" : "uMVP",
+        "viewProjection" : "uViewProj",
         "inverseViewProjection" : "uInvViewProj"
+    },
+    "instancing" : {
+        "vec3" : {
+            "color" : "iColor",
+            "position" : "iPosition"
+        }
     },
     "controls" : {
         "sampler2D" : {
@@ -18,7 +24,6 @@
         }
     },
     "output" : {
-        "diffuse" : "fDiffuse",
-        "bright" : "fBright"
+        "color" : "fBright"
     }
 }
