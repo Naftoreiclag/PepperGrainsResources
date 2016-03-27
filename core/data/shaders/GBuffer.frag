@@ -41,7 +41,7 @@ void main() {
     // Remove shadows
     //isInDirectSunlight = 1.0;
     
-    vec3 sunColor = vec3(2.0, 2.0, 2.0);
+    vec3 sunColor = vec3(0.5, 0.5, 0.5);
     vec3 ambientBright = vec3(0.2, 0.2, 0.2);
     vec3 totalBright = (sunColor * clamp(dot(fNormal, -uSunDir), 0.0, isInDirectSunlight)) + ambientBright;
     

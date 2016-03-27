@@ -11,16 +11,14 @@
         "viewProjection" : "uViewProj",
         "inverseViewProjection" : "uInvViewProj"
     },
-    "instancing" : {
-        "vec3" : {
-            "color" : "iColor",
-            "position" : "iPosition"
-        }
-    },
     "controls" : {
         "sampler2D" : {
             "normal" : "gNormal",
             "depth" : "gDepth"
+        },
+        "vec3" : {
+            "position" : "iPosition",
+            "color" : "iColor"
         }
     },
     "output" : {
