@@ -1,0 +1,30 @@
+{
+    "link" : [
+        "PointLightVolume.vertexShader",
+        "PointLightVolume.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iVertexPosition"
+    },
+    "matrices" : {
+        "viewProjection" : "uViewProjection",
+        "inverseViewProjection" : "uInvViewProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "normal" : "gNormal",
+            "depth" : "gDepth"
+        },
+        "vec3" : {
+            "position" : "uPosition",
+            "color" : "uColor"
+        },
+        "float" : {
+            "volumeRadius" : "uVolumeRadius",
+            "radius" : "uRadius"
+        }
+    },
+    "output" : {
+        "color" : "fBright"
+    }
+}

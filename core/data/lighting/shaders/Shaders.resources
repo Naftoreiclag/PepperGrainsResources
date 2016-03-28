@@ -20,13 +20,33 @@
         "file" : "PointLightStencil.vert"
     },
     {
-        "name" : "PointLightStencil.fragmentShader",
-        "type" : "fragment-shader",
-        "file" : "PointLightStencil.frag"
-    },
-    {
         "name" : "PointLightStencil.shaderProgram",
         "type" : "shader-program",
         "file" : "PointLightStencil.prog"
+    },
+    {
+        "name" : "DirectionalLightVolume.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "DirectionalLightVolume.vert"
+    },
+    {
+        "name" : "DirectionalLightVolume.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "DirectionalLightVolume.frag"
+    },
+    {
+        "name" : "DirectionalLightVolume.shaderProgram",
+        "type" : "shader-program",
+        "file" : "DirectionalLightVolume.prog"
+    },
+    {
+        "name" : "DirectionalLightStencil.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "DirectionalLightStencil.vert"
+    },
+    {
+        "name" : "DirectionalLightStencil.shaderProgram",
+        "type" : "shader-program",
+        "file" : "DirectionalLightStencil.prog"
     }
 ]
