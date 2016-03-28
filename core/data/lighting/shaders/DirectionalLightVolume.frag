@@ -7,5 +7,5 @@ out vec3 fBright;
 void main() {
     vec2 vUV = (vVertexPosition + 1.0) / 2.0;
     vec3 fNormal = texture(gNormal, vUV).xyz;
-    fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, 1.0);
+    fBright = uColor;//uColor * clamp(dot(fNormal, uDirection), 0.0, 1.0);
 }
