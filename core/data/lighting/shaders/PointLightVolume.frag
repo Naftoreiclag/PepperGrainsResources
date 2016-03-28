@@ -9,9 +9,8 @@ uniform mat4 uInvViewProj;
 
 uniform vec3 uPosition;
 uniform vec3 uColor;
-
-uniform float uLinear;
-uniform float uQuadr;
+uniform float uRadius;
+uniform float uVolumeRadius;
 
 out vec3 fBright;
 
@@ -27,10 +26,12 @@ void main() {
     fPosition /= fPosition.w; // perspective divide
     
     vec3 dirToLight = uPosition - fPosition.xyz;
-    float dist = length(dirToLight);
-    dirToLight /= dist;
+    float distToSurf = length(dirToLight);
+    dirToLight /= distToSurf;
+    distToSurf = max(distToSurf - uRadius, 0.0);
+    float atten = 1.0 / (1.0 + (distToSurf / uRadius));
+    atten *= atten;
+    atten -= min(distToSurf / (uVolumeRadius - uRadius), 1.0) * 0.002;
     
-    float atten = 1.0 / (1.0 + (uLinear * dist) + (uQuadr * dist * dist));
-    
-    fBright = uColor * clamp(dot(fNormal, dirToLight), 0.0, 1.0) * atten;
+    fBright = uColor * atten;
 }

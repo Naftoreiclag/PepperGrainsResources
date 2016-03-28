@@ -1,7 +1,7 @@
 {
     "link" : [
-        "PointLightStencil.vertexShader",
-        "PointLightStencil.fragmentShader"
+        "MinimalWhite.vertexShader",
+        "MinimalWhite.fragmentShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"
@@ -10,8 +10,8 @@
         "modelViewProjection" : "uMVP"
     },
     "controls" : {
-        "float" : {
-            "volumeRadius" : "uVolumeRadius"
+        "vec3" : {
+            "color" : "uColor"
         }
     },
     "output" : {

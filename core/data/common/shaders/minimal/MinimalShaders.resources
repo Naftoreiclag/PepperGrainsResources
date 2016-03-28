@@ -13,5 +13,20 @@
         "name" : "MinimalWhite.shaderProgram",
         "type" : "shader-program",
         "file" : "MinimalWhite.prog"
+    },
+    {
+        "name" : "MinimalColor.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "MinimalColor.vert"
+    },
+    {
+        "name" : "MinimalColor.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "MinimalColor.frag"
+    },
+    {
+        "name" : "MinimalColor.shaderProgram",
+        "type" : "shader-program",
+        "file" : "MinimalColor.prog"
     }
 ]
