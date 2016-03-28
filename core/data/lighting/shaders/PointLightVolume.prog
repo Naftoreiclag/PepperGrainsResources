@@ -8,7 +8,7 @@
     },
     "matrices" : {
         "model" : "uModel",
-        "viewProjection" : "uViewProj",
+        "modelViewProjection" : "uMVP",
         "inverseViewProjection" : "uInvViewProj"
     },
     "controls" : {

@@ -1,0 +1,15 @@
+{
+    "link" : [
+        "PointLightStencil.vertexShader",
+        "PointLightStencil.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iVertexPosition"
+    },
+    "matrices" : {
+        "modelViewProjection" : "uMVP"
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}

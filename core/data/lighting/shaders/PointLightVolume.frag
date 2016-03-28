@@ -29,5 +29,5 @@ void main() {
     float quadrat = 1.3;
     float atten = 1.0 / (1.0 + (linear * dist) + (quadrat * dist * dist));
     
-    fBright = vec3(0.0, 1.0, 1.0);// * atten;
+    fBright = vec3(0.0, 1.0, 1.0) * atten;
 }
