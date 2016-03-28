@@ -9,6 +9,11 @@
     "matrices" : {
         "modelViewProjection" : "uMVP"
     },
+    "controls" : {
+        "float" : {
+            "radius" : "uRadius"
+        }
+    },
     "output" : {
         "color" : "fColor"
     }

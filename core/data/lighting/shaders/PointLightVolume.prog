@@ -7,7 +7,6 @@
         "position" : "iVertexPosition"
     },
     "matrices" : {
-        "model" : "uModel",
         "modelViewProjection" : "uMVP",
         "inverseViewProjection" : "uInvViewProj"
     },
@@ -17,8 +16,13 @@
             "depth" : "gDepth"
         },
         "vec3" : {
-            "position" : "iPosition",
-            "color" : "iColor"
+            "position" : "uPosition",
+            "color" : "uColor"
+        },
+        "float" : {
+            "linear" : "uLinear",
+            "quadratic" : "uQuadr",
+            "radius" : "uRadius"
         }
     },
     "output" : {
