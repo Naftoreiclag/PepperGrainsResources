@@ -22,12 +22,14 @@ void main() {
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
     fPosition /= fPosition.w; // perspective divide
     
-    vec3 source = uModel[3].xyz;
+    vec3 iPosition = uModel[3].xyz;
+    vec3 dirToLight = iPosition - fPosition.xyz;
+    float dist = length(dirToLight);
+    dirToLight /= dist;
     
-    float dist = length(fPosition.xyz - source);
-    float linear = 0.5;
-    float quadrat = 1.3;
+    float linear = 1.5;
+    float quadrat = 2.3;
     float atten = 1.0 / (1.0 + (linear * dist) + (quadrat * dist * dist));
     
-    fBright = vec3(0.0, 1.0, 1.0) * atten;
+    fBright = vec3(0.0, 1.0, 1.0) * clamp(dot(fNormal, dirToLight), 0.0, 1.0) * atten;
 }
