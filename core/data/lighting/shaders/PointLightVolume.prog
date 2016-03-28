@@ -7,7 +7,7 @@
         "position" : "iVertexPosition"
     },
     "matrices" : {
-        "modelViewProjection" : "uMVP",
+        "viewProjection" : "uViewProjection",
         "inverseViewProjection" : "uInvViewProj"
     },
     "controls" : {

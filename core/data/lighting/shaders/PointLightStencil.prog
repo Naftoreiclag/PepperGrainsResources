@@ -7,9 +7,12 @@
         "position" : "iVertexPosition"
     },
     "matrices" : {
-        "modelViewProjection" : "uMVP"
+        "viewProjection" : "uViewProjection"
     },
     "controls" : {
+        "vec3" : {
+            "position" : "uPosition"
+        },
         "float" : {
             "volumeRadius" : "uVolumeRadius"
         }

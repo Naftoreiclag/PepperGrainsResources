@@ -3,11 +3,12 @@ in vec3 iVertexPosition;
 
 out vec4 vVertexPosition;
 
-uniform mat4 uMVP;
+uniform mat4 uViewProjection;
+uniform vec3 uPosition;
 uniform float uVolumeRadius;
 
 void main() {
-    vVertexPosition = uMVP * vec4(iVertexPosition * uVolumeRadius, 1.0);
+    vVertexPosition = uViewProjection * vec4((iVertexPosition * uVolumeRadius) + uPosition, 1.0);
     
     gl_Position = vVertexPosition;
 }
