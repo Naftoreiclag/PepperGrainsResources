@@ -1,27 +1,18 @@
 {
     "link" : [
-        "PointLightVolume.vertexShader",
-        "PointLightVolume.fragmentShader"
+        "DirectionalLightVolume.vertexShader",
+        "DirectionalLightVolume.fragmentShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"
     },
-    "matrices" : {
-        "viewProjection" : "uViewProjection",
-        "inverseViewProjection" : "uInvViewProj"
-    },
     "controls" : {
         "sampler2D" : {
-            "normal" : "gNormal",
-            "depth" : "gDepth"
+            "normal" : "gNormal"
         },
         "vec3" : {
-            "position" : "uPosition",
+            "direction" : "uDirection",
             "color" : "uColor"
-        },
-        "float" : {
-            "volumeRadius" : "uVolumeRadius",
-            "radius" : "uRadius"
         }
     },
     "output" : {

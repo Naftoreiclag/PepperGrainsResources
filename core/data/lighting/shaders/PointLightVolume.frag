@@ -31,7 +31,7 @@ void main() {
     distToSurf = max(distToSurf - uRadius, 0.0);
     float atten = 1.0 / (1.0 + (distToSurf / uRadius));
     atten *= atten;
-    // Decrease brightness to zero at (uVolumeRadius - uRadius) distance from the surface, to remove banding.
+    // Decrease brightness to zero at (uVolumeRadius - uRadius) distance from the surface of the light to remove banding
     // 0.005 comes from calculation for volume sizes
     atten -= min(distToSurf / (uVolumeRadius - uRadius), 1.0) * 0.005;
     

@@ -1,19 +1,8 @@
 {
     "link" : [
-        "PointLightStencil.vertexShader"
+        "DirectionalLightStencil.vertexShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"
-    },
-    "matrices" : {
-        "viewProjection" : "uViewProjection"
-    },
-    "controls" : {
-        "vec3" : {
-            "position" : "uPosition"
-        },
-        "float" : {
-            "volumeRadius" : "uVolumeRadius"
-        }
     }
 }
