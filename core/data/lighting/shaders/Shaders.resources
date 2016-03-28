@@ -48,5 +48,20 @@
         "name" : "DirectionalLightStencil.shaderProgram",
         "type" : "shader-program",
         "file" : "DirectionalLightStencil.prog"
+    },
+    {
+        "name" : "SunLightVolume.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "SunLightVolume.vert"
+    },
+    {
+        "name" : "SunLightVolume.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "SunLightVolume.frag"
+    },
+    {
+        "name" : "SunLightVolume.shaderProgram",
+        "type" : "shader-program",
+        "file" : "SunLightVolume.prog"
     }
 ]

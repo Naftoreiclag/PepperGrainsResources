@@ -1,0 +1,27 @@
+{
+    "link" : [
+        "SunLightVolume.vertexShader",
+        "SunLightVolume.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iVertexPosition"
+    },
+    "matrices" : {
+        "inverseViewProjection" : "uInvViewProj",
+        "sunViewProjection" : "uSunViewProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "normal" : "gNormal",
+            "depth" : "gDepth",
+            "sunDepth" : "gSunDepth"
+        },
+        "vec3" : {
+            "direction" : "uDirection",
+            "color" : "uColor"
+        }
+    },
+    "output" : {
+        "color" : "fBright"
+    }
+}

@@ -1,24 +1,22 @@
 #version 330
-in vec2 vUV;
+in vec2 vVertexPosition;
 
-out vec3 oColor;
+out vec3 fBright;
 
-uniform sampler2D gDiffuse;
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
-uniform sampler2D gBright;
 
 uniform sampler2DShadow gSunDepth;
-uniform vec3 uSunDir;
+
+uniform vec3 uDirection;
+uniform vec3 uColor;
 
 uniform mat4 uInvViewProj;
 uniform mat4 uSunViewProj;
 
 void main() {
-    vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
-    vec3 fBright = texture(gBright, vUV).xyz;
+    vec2 vUV = (vVertexPosition + 1.0) / 2.0;
     
-    /*
     vec3 fNormal = texture(gNormal, vUV).xyz;
     float fDepth = texture(gDepth, vUV).x;
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
@@ -28,7 +26,7 @@ void main() {
     fPositionInSun /= fPositionInSun.w;
     fPositionInSun = fPositionInSun * 0.5 + 0.5; 
     
-    float shadeBias = max(0.002 * (1.0 - dot(fNormal, uSunDir)), 0.001);
+    float shadeBias = max(0.002 * (1.0 - dot(fNormal, uDirection)), 0.001);
     
     // PCF
     float isInDirectSunlight = 0.0;
@@ -40,20 +38,6 @@ void main() {
     }
     isInDirectSunlight /= 9;
     
-    // Remove shadows
-    //isInDirectSunlight = 1.0;
     
-    vec3 sunColor = vec3(0.001, 0.001, 0.001);
-    vec3 ambientBright = vec3(0.001, 0.001, 0.001);
-    vec3 totalBright = (sunColor * clamp(dot(fNormal, -uSunDir), 0.0, isInDirectSunlight)) + ambientBright;
-    
-    totalBright += fBright;
-    */
-    
-    oColor = fDiffuse * fBright;
-    // Tone mapping
-    oColor = oColor / (oColor + vec3(1.0));
-    // Gamma correction
-    oColor = pow(oColor, vec3(1.0 / 2.2));
-    
+    fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, isInDirectSunlight);
 }
