@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "FillScreen.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "FillScreen.vert"
+    },
+    {
+        "name" : "FillScreen.shaderProgram",
+        "type" : "shader-program",
+        "file" : "FillScreen.prog"
+    }
+]

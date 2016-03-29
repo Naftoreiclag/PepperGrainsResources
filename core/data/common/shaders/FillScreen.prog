@@ -1,6 +1,6 @@
 {
     "link" : [
-        "DebugFillScreen.vertexShader",
+        "FillScreen.vertexShader",
         "MinimalColor.fragmentShader"
     ],
     "attributes" : {
