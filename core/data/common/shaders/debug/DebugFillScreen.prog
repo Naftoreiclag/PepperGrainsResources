@@ -1,0 +1,17 @@
+{
+    "link" : [
+        "DebugFillScreen.vertexShader",
+        "MinimalColor.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iVertexPosition"
+    },
+    "controls" : {
+        "vec3" : {
+            "color" : "uColor"
+        }
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}

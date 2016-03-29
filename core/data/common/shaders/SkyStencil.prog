@@ -1,8 +1,12 @@
 {
     "link" : [
-        "SkyStencil.vertexShader"
+        "SkyStencil.vertexShader",
+        "MinimalWhite.fragmentShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"
+    },
+    "output" : {
+        "bright" : "fColor"
     }
 }

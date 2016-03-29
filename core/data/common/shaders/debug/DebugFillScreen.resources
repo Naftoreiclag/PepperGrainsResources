@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "DebugFillScreen.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "DebugFillScreen.vert"
+    },
+    {
+        "name" : "DebugFillScreen.shaderProgram",
+        "type" : "shader-program",
+        "file" : "DebugFillScreen.prog"
+    }
+]
