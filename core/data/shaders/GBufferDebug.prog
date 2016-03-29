@@ -4,8 +4,7 @@
         "GBufferDebug.fragmentShader"
     ],
     "attributes" : {
-        "position" : "iPosition",
-        "uv" : "iUV"
+        "position" : "iPosition"
     },
     "matrices" : {
         "inverseViewProjection" : "uInvViewProj"

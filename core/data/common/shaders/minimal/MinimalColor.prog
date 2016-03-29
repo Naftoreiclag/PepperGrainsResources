@@ -1,7 +1,7 @@
 {
     "link" : [
-        "MinimalWhite.vertexShader",
-        "MinimalWhite.fragmentShader"
+        "MinimalColor.vertexShader",
+        "MinimalColor.fragmentShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"

@@ -38,6 +38,5 @@ void main() {
     }
     isInDirectSunlight /= 9;
     
-    
     fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, isInDirectSunlight);
 }

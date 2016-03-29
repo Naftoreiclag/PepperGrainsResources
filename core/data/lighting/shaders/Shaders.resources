@@ -40,16 +40,6 @@
         "file" : "DirectionalLightVolume.prog"
     },
     {
-        "name" : "DirectionalLightStencil.vertexShader",
-        "type" : "vertex-shader",
-        "file" : "DirectionalLightStencil.vert"
-    },
-    {
-        "name" : "DirectionalLightStencil.shaderProgram",
-        "type" : "shader-program",
-        "file" : "DirectionalLightStencil.prog"
-    },
-    {
         "name" : "SunLightVolume.vertexShader",
         "type" : "vertex-shader",
         "file" : "SunLightVolume.vert"

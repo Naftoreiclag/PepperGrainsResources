@@ -4,23 +4,12 @@
         "GBuffer.fragmentShader"
     ],
     "attributes" : {
-        "position" : "iPosition",
-        "uv" : "iUV"
-    },
-    "matrices" : {
-        "inverseViewProjection" : "uInvViewProj",
-        "sunViewProjection" : "uSunViewProj"
+        "position" : "iPosition"
     },
     "controls" : {
         "sampler2D" : {
             "diffuse" : "gDiffuse",
-            "normal" : "gNormal",
-            "depth" : "gDepth",
-            "bright" : "gBright",
-            "sunDepth" : "gSunDepth"
-        },
-        "vec3" : {
-            "sunDirection" : "uSunDir"
+            "bright" : "gBright"
         }
     },
     "output" : {

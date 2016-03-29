@@ -1,6 +1,6 @@
 {
     "link" : [
-        "DirectionalLightStencil.vertexShader"
+        "SkyStencil.vertexShader"
     ],
     "attributes" : {
         "position" : "iVertexPosition"

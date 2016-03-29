@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "SkyStencil.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "SkyStencil.vert"
+    },
+    {
+        "name" : "SkyStencil.shaderProgram",
+        "type" : "shader-program",
+        "file" : "SkyStencil.prog"
+    }
+]

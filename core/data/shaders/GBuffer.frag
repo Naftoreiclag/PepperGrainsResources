@@ -18,38 +18,6 @@ void main() {
     vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
     vec3 fBright = texture(gBright, vUV).xyz;
     
-    /*
-    vec3 fNormal = texture(gNormal, vUV).xyz;
-    float fDepth = texture(gDepth, vUV).x;
-    vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
-    fPosition /= fPosition.w; // perspective divide
-    
-    vec4 fPositionInSun = uSunViewProj * fPosition;
-    fPositionInSun /= fPositionInSun.w;
-    fPositionInSun = fPositionInSun * 0.5 + 0.5; 
-    
-    float shadeBias = max(0.002 * (1.0 - dot(fNormal, uSunDir)), 0.001);
-    
-    // PCF
-    float isInDirectSunlight = 0.0;
-    vec2 texelDimensions = 1.0 / textureSize(gSunDepth, 0);
-    for(int y = -1; y < 2; ++ y) {
-        for(int x = -1; x < 2; ++ x) {
-            isInDirectSunlight += texture(gSunDepth, vec3(vec2(x, y) * texelDimensions + fPositionInSun.xy, fPositionInSun.z - shadeBias));
-        }
-    }
-    isInDirectSunlight /= 9;
-    
-    // Remove shadows
-    //isInDirectSunlight = 1.0;
-    
-    vec3 sunColor = vec3(0.001, 0.001, 0.001);
-    vec3 ambientBright = vec3(0.001, 0.001, 0.001);
-    vec3 totalBright = (sunColor * clamp(dot(fNormal, -uSunDir), 0.0, isInDirectSunlight)) + ambientBright;
-    
-    totalBright += fBright;
-    */
-    
     oColor = fDiffuse * fBright;
     // Tone mapping
     oColor = oColor / (oColor + vec3(1.0));
