@@ -1,0 +1,16 @@
+#version 400
+layout(quads, equal_spacing, ccw) in;
+
+in vec3 cPosition[];
+out vec3 ePosition;
+
+uniform mat4 uMVP;
+
+void main() {
+    ePosition = 
+        ((gl_TessCoord.x * cPosition[0]) + 
+        (gl_TessCoord.y * cPosition[1]) + 
+        (gl_TessCoord.z * cPosition[2])) / 3.0;
+    
+    gl_Position = uMVP * vec4(ePosition, 1.0);
+}

@@ -1,0 +1,23 @@
+{
+    "link" : [
+        "Tessellate.vertexShader",
+        "Tessellate.tessControlShader",
+        "Tessellate.tessEvaluationShader",
+        "Tessellate.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "matrices" : {
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "float" : {
+            "levelInner" : "levelInner",
+            "levelOuter" : "levelOuter"
+        }
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}

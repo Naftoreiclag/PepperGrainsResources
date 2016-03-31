@@ -1,0 +1,22 @@
+#version 400
+layout(vertices = 4) out;
+
+in vec3 vPosition[];
+out vec3 cPosition[];
+
+uniform float levelInner;
+uniform float levelOuter;
+
+void main() {
+    cPosition[gl_InvocationID] = vPosition[gl_InvocationID];
+    
+    // Only once, hopefully
+    if(gl_InvocationID == 0) {
+        gl_TessLevelInner[0] = levelInner;
+        gl_TessLevelInner[1] = levelInner;
+        gl_TessLevelOuter[0] = levelInner;
+        gl_TessLevelOuter[1] = levelInner;
+        gl_TessLevelOuter[2] = levelInner;
+        gl_TessLevelOuter[3] = levelInner;
+    }
+}
