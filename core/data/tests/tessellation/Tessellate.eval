@@ -7,10 +7,10 @@ out vec3 ePosition;
 uniform mat4 uMVP;
 
 void main() {
-    ePosition = 
-        ((gl_TessCoord.x * cPosition[0]) + 
-        (gl_TessCoord.y * cPosition[1]) + 
-        (gl_TessCoord.z * cPosition[2])) / 3.0;
+    vec3 foo = mix(cPosition[0], cPosition[1], gl_TessCoord.x);
+    vec3 bar = mix(cPosition[2], cPosition[3], gl_TessCoord.x);
+    
+    ePosition = mix(foo, bar, gl_TessCoord.y);
     
     gl_Position = uMVP * vec4(ePosition, 1.0);
 }
