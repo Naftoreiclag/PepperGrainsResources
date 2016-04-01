@@ -1,0 +1,16 @@
+#version 400
+layout(quads, fractional_even_spacing, ccw) in;
+
+in vec3 cPosition[];
+out vec3 ePosition;
+
+uniform mat4 uMVP;
+
+void main() {
+    vec3 foo = mix(cPosition[0], cPosition[1], gl_TessCoord.x);
+    vec3 bar = mix(cPosition[3], cPosition[2], gl_TessCoord.x);
+    
+    ePosition = mix(foo, bar, gl_TessCoord.y);
+    
+    gl_Position = uMVP * vec4(ePosition, 1.0);
+}

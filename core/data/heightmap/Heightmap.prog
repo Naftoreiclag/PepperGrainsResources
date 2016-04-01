@@ -1,0 +1,29 @@
+{
+    "link" : [
+        "Heightmap.vertexShader",
+        "Heightmap.tessControlShader",
+        "Heightmap.tessEvaluationShader",
+        "Heightmap.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "vec3" : {
+            "camPos" : "uCamPos"
+        },
+        "float" : {
+            "minDist" : "uMinDist",
+            "maxDist" : "uMaxDist",
+            "minTess" : "uMinTess",
+            "maxTess" : "uMaxTess"
+        }
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}
