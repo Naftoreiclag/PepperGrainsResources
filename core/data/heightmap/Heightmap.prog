@@ -21,6 +21,9 @@
             "maxDist" : "uMaxDist",
             "minTess" : "uMinTess",
             "maxTess" : "uMaxTess"
+        },
+        "sampler2D" : {
+            "heightMap" : "uHeightMap"
         }
     },
     "output" : {

@@ -6,11 +6,14 @@ out vec3 ePosition;
 
 uniform mat4 uMVP;
 
+uniform sampler2D uHeightMap;
+
 void main() {
     vec3 foo = mix(cPosition[0], cPosition[1], gl_TessCoord.x);
     vec3 bar = mix(cPosition[3], cPosition[2], gl_TessCoord.x);
     
     ePosition = mix(foo, bar, gl_TessCoord.y);
+    ePosition.y += texture(uHeightMap, gl_TessCoord.xy).x;
     
     gl_Position = uMVP * vec4(ePosition, 1.0);
 }

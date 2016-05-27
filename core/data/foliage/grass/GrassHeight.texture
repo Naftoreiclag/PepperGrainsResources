@@ -2,8 +2,8 @@
     "image" : "GrassHeight.image",
     "internalFormat" : "R8",
     "pixelFormat" : "RED",
-    "minFilter" : "nearest",
-    "magFilter" : "nearest",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
     "wrapX" : "repeat",
     "wrapY" : "repeat"
 }
