@@ -1,0 +1,13 @@
+{
+    "link" : [
+        "ComputeTest.computeShader"
+    ],
+    "controls" : {
+        "image2D" : {
+            "inputImage" : "gColor"
+        }
+    },
+    "output" : {
+        "outputImage" : "potatoImg"
+    }
+}

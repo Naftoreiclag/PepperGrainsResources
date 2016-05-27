@@ -1,0 +1,36 @@
+#version 430
+
+// Only run once
+layout(local_size_x = 1​) in;
+
+buffer readonly DepthMinMaxData {
+    int maxDepth;
+    int minDepth;
+} inputData;
+
+buffer writeonly DepthBoundsData {
+    // Dividing slices
+    vec3 depthBounds
+} outputData;
+
+void main() {
+    float maxDepth = intBitsToFloat(inputData.maxDepth);
+    float minDepth = intBitsToFloat(inputData.minDepth);
+    
+    /*
+    float aDepth = minDepth * pow(maxDepth / minDepth, 0.25);
+    float bDepth = minDepth * pow(maxDepth / minDepth, 0.50);
+    float cDepth = minDepth * pow(maxDepth / minDepth, 0.75);
+    */
+    
+    float foo = sqrt(maxDepth / minDepth);
+    float bar = sqrt(foo);
+    
+    float aDepth = minDepth * bar;
+    float bDepth = minDepth * foo;
+    float cDepth = aDepth * bar;
+    
+    depthBounds.x = aDepth;
+    depthBounds.y = bDepth;
+    depthBounds.z = cDepth;
+}

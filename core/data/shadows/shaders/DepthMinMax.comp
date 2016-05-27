@@ -1,0 +1,41 @@
+#version 430
+
+layout(local_size_x = 8, local_size_y = 8​) in;
+
+buffer DepthMinMaxData {
+    int maxDepth;
+    int minDepth;
+} dispatchSharedData;
+
+uniform readonly image2D gDepth;
+
+/*
+shared int sharedMaxDepth = 0;
+shared int sharedMinDepth = 0xFFFFFFFF;
+*/
+
+void main() {
+    ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
+    
+    float pDepth = imageLoad(gDepth, pixelCoords);
+    
+    // This (should) allow for correct greater-than and less-than comparisons assuming
+    // that all values are either all positive or all negative, which is true in the
+    // case of depth-buffer values (all positive).
+    int ipDepth = floatBitsToInt(pDepth);
+    
+    atomicMin(dispatchSharedData.maxDepth, ipDepth);
+    atomicMax(dispatchSharedData.minDepth, ipDepth);
+    
+    /*
+    atomicMin(sharedMaxDepth, ipDepth);
+    atomicMax(sharedMinDepth, ipDepth);
+    
+    barrier();
+    
+    if(gl_LocalInvocationID.x == 0 && gl_LocalInvocationID.y == 0) {
+        atomicMin(dispatchSharedData.maxDepth, sharedMaxDepth);
+        atomicMax(dispatchSharedData.minDepth, sharedMinDepth);
+    }
+    */
+}

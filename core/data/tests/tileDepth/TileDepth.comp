@@ -1,0 +1,31 @@
+#version 430
+
+layout(local_size_x = 8, local_size_y = 8​) in;
+
+buffer ShaderStorageBufferObject {
+    int maxDepth;
+    int minDepth;
+} dispatchSharedData;
+
+uniform readonly image2D gDepth;
+
+shared int sharedMaxDepth = 0;
+shared int sharedMinDepth = 0xFFFFFFFF;
+
+void main() {
+    ivec2 globalLoc = ivec2(gl_GlobalInvocationID.xy);
+    
+    float pDepth = imageLoad(gDepth, globalLoc);
+    
+    int ipDepth = floatBitsToInt(pDepth);
+    
+    atomicMax(sharedMaxDepth, ipDepth);
+    atomicMin(sharedMinDepth, ipDepth);
+    
+    barrier();
+    
+    if(gl_LocalInvocationID.x == 0 && gl_LocalInvocationID.y == 0) {
+        dispatchSharedData.maxDepth = sharedMaxDepth;
+        dispatchSharedData.minDepth = sharedMinDepth;
+    }
+}
