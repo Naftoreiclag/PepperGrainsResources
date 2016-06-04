@@ -1,0 +1,19 @@
+{
+    "link" : [
+        "MinimalCN.vertexShader",
+        "MinimalCN.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "color" : "iColor",
+        "normal" : "iNormal"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "output" : {
+        "diffuse" : "fColor",
+        "normal" : "fNormal"
+    }
+}

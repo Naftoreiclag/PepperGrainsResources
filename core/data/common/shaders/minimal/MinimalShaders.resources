@@ -28,5 +28,20 @@
         "name" : "MinimalColor.shaderProgram",
         "type" : "shader-program",
         "file" : "MinimalColor.prog"
+    },
+    {
+        "name" : "MinimalCN.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "MinimalCN.vert"
+    },
+    {
+        "name" : "MinimalCN.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "MinimalCN.frag"
+    },
+    {
+        "name" : "MinimalCN.shaderProgram",
+        "type" : "shader-program",
+        "file" : "MinimalCN.prog"
     }
 ]

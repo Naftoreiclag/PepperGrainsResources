@@ -1,3 +1,7 @@
+MinimalWhite: White uniform color for every fragment
+MinimalColor: Variable uniform color for every fragment
+MinimalCN: Per-vertex color, normal
+
 Example usage:
   Perform passes that are meant only to change the stencil or depth buffers
   Debugging
