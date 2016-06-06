@@ -11,7 +11,7 @@ uniform sampler2D gMap3;
 uniform vec4 uShowWhat;
 
 void main() {
-    float f1 = texture(gMap0, vUV).x;
+    float f0 = texture(gMap0, vUV).x;
     float f1 = texture(gMap1, vUV).x;
     float f2 = texture(gMap2, vUV).x;
     float f3 = texture(gMap3, vUV).x;
