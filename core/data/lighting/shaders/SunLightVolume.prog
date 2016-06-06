@@ -7,18 +7,32 @@
         "position" : "iVertexPosition"
     },
     "matrices" : {
-        "inverseViewProjection" : "uInvViewProj",
-        "sunViewProjection" : "uSunViewProj"
+        "inverseViewProjection" : "uInvViewProj"
     },
     "controls" : {
         "sampler2D" : {
             "normal" : "gNormal",
             "depth" : "gDepth",
-            "sunDepth" : "gSunDepth"
+            "sunDepth0" : "gSunDepth0",
+            "sunDepth1" : "gSunDepth1",
+            "sunDepth2" : "gSunDepth2",
+            "sunDepth3" : "gSunDepth3"
         },
         "vec3" : {
             "direction" : "uDirection",
             "color" : "uColor"
+        },
+        "float" : {
+            "nearPlane" : "uNear"
+        },
+        "vec4" : {
+            "cascadeFars" : "uCascadeFars"
+        },
+        "mat4" : {
+            "sunViewProjection0" : "uSunViewProj0",
+            "sunViewProjection1" : "uSunViewProj1",
+            "sunViewProjection2" : "uSunViewProj2",
+            "sunViewProjection3" : "uSunViewProj3"
         }
     },
     "output" : {
