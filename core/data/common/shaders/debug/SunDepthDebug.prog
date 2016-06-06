@@ -1,0 +1,23 @@
+{
+    "link" : [
+        "SunDepthDebug.vertexShader",
+        "SunDepthDebug.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "map0" : "gMap0",
+            "map1" : "gMap1",
+            "map2" : "gMap2",
+            "map3" : "gMap3"
+        },
+        "vec4" : {
+            "showWhat" : "uShowWhat"
+        }
+    },
+    "output" : {
+        "color" : "oColor"
+    }
+}
