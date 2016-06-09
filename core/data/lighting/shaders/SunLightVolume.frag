@@ -59,8 +59,9 @@ void main() {
     
     float shadeBias = max(0.002 * (1.0 - dot(fNormal, uDirection)), 0.001);
     
-    // PCF
     float isInDirectSunlight = 0.0;
+    // PCF
+    /*
     vec2 texelDimensions = 1.0 / textureSize(gSunDepth0, 0);
     for(int y = -1; y < 2; ++ y) {
         for(int x = -1; x < 2; ++ x) {
@@ -77,10 +78,24 @@ void main() {
         }
     }
     isInDirectSunlight /= 9;
+    */
+    vec3 potato = vec3(fPositionInSun.xy, fPositionInSun.z - shadeBias);
+    if(fDepthLin < uCascadeFars[0]) {
+        isInDirectSunlight += texture(gSunDepth0, potato);
+    } else if(fDepthLin < uCascadeFars[1]) {
+        isInDirectSunlight += texture(gSunDepth1, potato);
+    } else if(fDepthLin < uCascadeFars[2]) {
+        isInDirectSunlight += texture(gSunDepth2, potato);
+    } else if(fDepthLin < uCascadeFars[3]) {
+        isInDirectSunlight += texture(gSunDepth3, potato);
+    }
+    
+    //isInDirectSunlight += texture(gSunDepth0, potato);
     
     fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, isInDirectSunlight);
     
     // Debug
+    /*
     if(fDepthLin < uCascadeFars[0]) {
         fBright = (fBright + vec3(1.0, 0.0, 0.0)) / 2.0;
     } else if(fDepthLin < uCascadeFars[1]) {
@@ -92,4 +107,5 @@ void main() {
     } else {
         fBright = (fBright + vec3(1.0, 0.0, 1.0)) / 2.0;
     }
+    */
 }
