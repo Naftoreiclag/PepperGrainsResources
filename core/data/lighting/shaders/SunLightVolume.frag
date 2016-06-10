@@ -41,6 +41,7 @@ void main() {
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepthNDC, 1.0);
     fPosition /= fPosition.w; // perspective divide
     
+    
     vec4 fPositionInSun;
     if(fDepthLin < uCascadeFars[0]) {
         fPositionInSun = uSunViewProj0 * fPosition;
@@ -55,9 +56,9 @@ void main() {
     }
     
     fPositionInSun /= fPositionInSun.w;
-    fPositionInSun = fPositionInSun * 0.5 + 0.5; 
+    fPositionInSun = fPositionInSun * 0.5 + 0.5;
     
-    float shadeBias = max(0.002 * (1.0 - dot(fNormal, uDirection)), 0.001);
+    float shadeBias = max(0.001 * (1.0 - dot(fNormal, uDirection)), 0) + 0.001;
     
     float isInDirectSunlight = 0.0;
     // PCF
@@ -92,6 +93,7 @@ void main() {
     
     //isInDirectSunlight += texture(gSunDepth0, potato);
     
+    // Dot product: +1 = facing directly toward the sun, 0 = perpendicular to the sun, -1 = facing away from the sun
     fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, isInDirectSunlight);
     
     // Debug
