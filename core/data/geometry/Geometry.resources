@@ -1,5 +1,19 @@
 [
     {
+        "name" : "SquarePlate.geometry",
+        "type" : "geometry",
+        "file" : "SquarePlate.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
         "name" : "Door.geometry",
         "type" : "geometry",
         "file" : "Door.fbx",

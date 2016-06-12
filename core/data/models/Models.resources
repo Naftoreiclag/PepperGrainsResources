@@ -1,5 +1,10 @@
 [
     {
+        "name" : "SquarePlate.model",
+        "type" : "model",
+        "file" : "SquarePlate.model"
+    },
+    {
         "name" : "RoseCube.model",
         "type" : "model",
         "file" : "RoseCube.model"

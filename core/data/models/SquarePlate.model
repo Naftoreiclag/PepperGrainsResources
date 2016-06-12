@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "SquarePlate.geometry",
+            "material" : "128Rose.material"
+        }
+    ]
+}
