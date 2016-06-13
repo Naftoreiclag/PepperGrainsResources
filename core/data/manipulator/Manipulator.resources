@@ -1,0 +1,39 @@
+[
+    {
+        "name" : "Manipulator.material",
+        "type" : "material",
+        "file" : "Manipulator.material"
+    },
+    {
+        "name" : "ManipulatorArrow.geometry",
+        "type" : "geometry",
+        "file" : "ManipulatorArrow.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "ManipulatorWheel.geometry",
+        "type" : "geometry",
+        "file" : "ManipulatorWheel.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "ManipulatorArrow.model",
+        "type" : "model",
+        "file" : "ManipulatorArrow.model"
+    },
+    {
+        "name" : "ManipulatorWheel.model",
+        "type" : "model",
+        "file" : "ManipulatorWheel.model"
+    }
+]
