@@ -20,5 +20,20 @@
                 "remove" : true
             }
         }
+    },
+    {
+        "name" : "Manipulator.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "Manipulator.vert"
+    },
+    {
+        "name" : "Manipulator.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "Manipulator.frag"
+    },
+    {
+        "name" : "Manipulator.shaderProgram",
+        "type" : "shader-program",
+        "file" : "Manipulator.prog"
     }
 ]

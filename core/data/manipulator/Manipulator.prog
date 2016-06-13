@@ -1,0 +1,23 @@
+{
+    "link" : [
+        "Manipulator.vertexShader",
+        "Manipulator.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iVertexPosition",
+        "normal" : "iVertexNormal"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "vec3" : {
+            "color" : "uColor",
+            "sunDirection" : "uSunDir"
+        }
+    },
+    "output" : {
+        "color" : "fColor"
+    }
+}
