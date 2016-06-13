@@ -1,8 +1,0 @@
-{
-    "solids" : [
-        {
-            "geometry" : "ManipulatorArrow.geometry",
-            "material" : "ManipulatorArrow.material"
-        }
-    ]
-}

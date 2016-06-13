@@ -1,10 +1,5 @@
 [
     {
-        "name" : "Manipulator.material",
-        "type" : "material",
-        "file" : "Manipulator.material"
-    },
-    {
         "name" : "ManipulatorArrow.geometry",
         "type" : "geometry",
         "file" : "ManipulatorArrow.fbx",
@@ -25,15 +20,5 @@
                 "remove" : true
             }
         }
-    },
-    {
-        "name" : "ManipulatorArrow.model",
-        "type" : "model",
-        "file" : "ManipulatorArrow.model"
-    },
-    {
-        "name" : "ManipulatorWheel.model",
-        "type" : "model",
-        "file" : "ManipulatorWheel.model"
     }
 ]
