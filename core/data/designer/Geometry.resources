@@ -1,0 +1,30 @@
+[
+    {
+        "name" : "StraightEdge.geometry",
+        "type" : "geometry",
+        "file" : "StraightEdge.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "VertexBall.geometry",
+        "type" : "geometry",
+        "file" : "Vertex.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    }
+]
