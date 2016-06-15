@@ -8,6 +8,9 @@
             "uvs" : {
                 "flip" : true
             },
+            "tangents" : {
+                "generate" : true
+            },
             "color" : {
                 "remove" : true
             }

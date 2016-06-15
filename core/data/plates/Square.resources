@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "SquareNormals.image",
+        "type" : "image",
+        "file" : "SquareNormals.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "SquareNormals.texture",
+        "type" : "texture",
+        "file" : "SquareNormals.texture"
+    },
+    {
+        "name" : "SquareDiffuse.image",
+        "type" : "image",
+        "file" : "SquareDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "SquareDiffuse.texture",
+        "type" : "texture",
+        "file" : "SquareDiffuse.texture"
+    },
+    {
+        "name" : "Square.material",
+        "type" : "material",
+        "file" : "Square.material"
+    }
+]

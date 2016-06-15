@@ -2,7 +2,7 @@
     "solids" : [
         {
             "geometry" : "SquarePlate.geometry",
-            "material" : "128Rose.material"
+            "material" : "Square.material"
         }
     ]
 }

@@ -20,7 +20,8 @@
         },
         "vec3" : {
             "direction" : "uDirection",
-            "color" : "uColor"
+            "color" : "uColor",
+            "cameraLocation" : "uCamLocation"
         },
         "float" : {
             "nearPlane" : "uNear"

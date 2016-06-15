@@ -1,0 +1,9 @@
+{
+    "image" : "SquareDiffuse.image",
+    "internalFormat" : "SRGB8",
+    "pixelFormat" : "RGB",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "repeat",
+    "wrapY" : "repeat"
+}

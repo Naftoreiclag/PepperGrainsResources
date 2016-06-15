@@ -12,6 +12,7 @@ uniform sampler2DShadow gSunDepth1;
 uniform sampler2DShadow gSunDepth2;
 uniform sampler2DShadow gSunDepth3;
 
+uniform vec3 uCamLocation;
 uniform vec3 uDirection;
 uniform vec3 uColor;
 
@@ -94,7 +95,13 @@ void main() {
     //isInDirectSunlight += texture(gSunDepth0, potato);
     
     // Dot product: +1 = facing directly toward the sun, 0 = perpendicular to the sun, -1 = facing away from the sun
-    fBright = uColor * clamp(dot(fNormal, uDirection), 0.0, isInDirectSunlight);
+    float diffuse = max(dot(fNormal, uDirection), 0.0);
+    
+    vec3 dirToCamera = normalize(uCamLocation - fPosition.xyz);
+    vec3 reflectionDir = reflect(-uDirection, fNormal);
+    float specular = pow(max(dot(dirToCamera, reflectionDir), 0.0), 256) * 3.0;
+    
+    fBright = uColor * clamp(diffuse + specular, 0.0, isInDirectSunlight * 4.0);
     
     // Debug
     /*
