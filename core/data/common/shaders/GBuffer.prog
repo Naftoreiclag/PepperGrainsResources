@@ -6,10 +6,24 @@
     "attributes" : {
         "position" : "iPosition"
     },
+    "matrices" : {
+        "inverseViewProjection" : "uInvViewProj",
+        "viewProjection" : "uViewProj"
+    },
     "controls" : {
         "sampler2D" : {
             "diffuse" : "gDiffuse",
-            "bright" : "gBright"
+            "normal" : "gNormal",
+            "depth" : "gDepth",
+            "bright" : "gBright",
+            "normalized2DNoise" : "noiseTexture"
+        },
+        "vec3" : {
+            "ssaoKernel" : "ssaoKernel"
+        },
+        "float" : {
+            "nearPlane" : "uNear",
+            "farPlane" : "uFar"
         }
     },
     "output" : {
