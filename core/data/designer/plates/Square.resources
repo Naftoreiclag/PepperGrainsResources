@@ -1,5 +1,22 @@
 [
     {
+        "name" : "SquarePlate.geometry",
+        "type" : "geometry",
+        "file" : "SquarePlate.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
         "name" : "SquareNormals.image",
         "type" : "image",
         "file" : "SquareNormals.png",

@@ -1,7 +1,0 @@
-{
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "SquareDiffuse.texture",
-        "normalMap" : "SquareNormals.texture"
-    }
-}
