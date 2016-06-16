@@ -1,0 +1,34 @@
+{
+    "link" : [
+        "SSAOVolume.vertexShader",
+        "SSAOVolume.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "matrices" : {
+        "inverseViewProjection" : "uInvViewProj",
+        "viewProjection" : "uViewProj"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "normal" : "gNormal",
+            "depth" : "gDepth",
+            "normalized2DNoise" : "uNoiseTexture"
+        },
+        "vec3" : {
+            "ssaoKernel" : "uSSAOKernel",
+            "color" : "uColor"
+        },
+        "vec2" : {
+            "normalized2DNoiseRatio" : "uNoiseRatio"
+        },
+        "float" : {
+            "nearPlane" : "uNear",
+            "farPlane" : "uFar"
+        }
+    },
+    "output" : {
+        "color" : "fBright"
+    }
+}

@@ -25,6 +25,21 @@
         "file" : "PointLightStencil.prog"
     },
     {
+        "name" : "SSAOVolume.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "SSAOVolume.vert"
+    },
+    {
+        "name" : "SSAOVolume.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "SSAOVolume.frag"
+    },
+    {
+        "name" : "SSAOVolume.shaderProgram",
+        "type" : "shader-program",
+        "file" : "SSAOVolume.prog"
+    },
+    {
         "name" : "DirectionalLightVolume.vertexShader",
         "type" : "vertex-shader",
         "file" : "DirectionalLightVolume.vert"
