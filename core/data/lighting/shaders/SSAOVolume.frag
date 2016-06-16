@@ -18,7 +18,7 @@ uniform float uFar;
 
 uniform vec3 uColor;
 
-const int ssaoSamples = 64;
+const int ssaoSamples = 32;
 const float ssaoRadius = 1.0;
 
 void main() {
