@@ -1,0 +1,55 @@
+[
+    {
+        "name" : "ConnectorBase.geometry",
+        "type" : "geometry",
+        "file" : "ConnectorBase.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "ConnectorBase.model",
+        "type" : "model",
+        "file" : "ConnectorBase.model"
+    },
+    {
+        "name" : "ConnectorBaseNormals.image",
+        "type" : "image",
+        "file" : "ConnectorBaseNormals.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "ConnectorBaseNormals.texture",
+        "type" : "texture",
+        "file" : "ConnectorBaseNormals.texture"
+    },
+    {
+        "name" : "ConnectorBaseDiffuse.image",
+        "type" : "image",
+        "file" : "ConnectorBaseDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "ConnectorBaseDiffuse.texture",
+        "type" : "texture",
+        "file" : "ConnectorBaseDiffuse.texture"
+    },
+    {
+        "name" : "ConnectorBase.material",
+        "type" : "material",
+        "file" : "ConnectorBase.material"
+    }
+]
