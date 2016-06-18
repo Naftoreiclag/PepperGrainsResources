@@ -1,0 +1,9 @@
+{
+    "image" : "MotorNormals.image",
+    "internalFormat" : "RGB8",
+    "pixelFormat" : "RGB",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "repeat",
+    "wrapY" : "repeat"
+}

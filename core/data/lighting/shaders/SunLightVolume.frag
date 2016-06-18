@@ -59,7 +59,18 @@ void main() {
     fPositionInSun /= fPositionInSun.w;
     fPositionInSun = fPositionInSun * 0.5 + 0.5;
     
-    float shadeBias = max(0.001 * (1.0 - dot(fNormal, uDirection)), 0) + 0.001;
+    float minShadeBias;
+    float extraShadeBias;
+    
+    if(fDepthLin < uCascadeFars[1]) {
+        minShadeBias = 0.0001;
+        extraShadeBias = 0.0001;
+    } else {
+        minShadeBias = 0.001;
+        extraShadeBias = 0.001;
+    }
+    
+    float shadeBias = max(extraShadeBias * (1.0 - dot(fNormal, uDirection)), 0) + minShadeBias;
     
     float isInDirectSunlight = 0.0;
     // PCF

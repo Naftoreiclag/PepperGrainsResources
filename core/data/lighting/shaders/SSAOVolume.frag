@@ -19,6 +19,7 @@ uniform float uFar;
 uniform vec3 uColor;
 
 const int ssaoSamples = 32;
+const int ssaoStepSize = 2;
 const float ssaoRadius = 1.0;
 
 void main() {
@@ -32,7 +33,7 @@ void main() {
     mat3 invTangentSpaceMatr = mat3(noiseTangent, cross(fNormal, noiseTangent), fNormal);
     
     float ssaoEffect = 0.0;
-    for(int i = 0; i < ssaoSamples; ++ i) {
+    for(int i = 0; i < ssaoSamples; i += ssaoStepSize) {
         vec4 sampleScreen = vec4(invTangentSpaceMatr * uSSAOKernel[i] * ssaoRadius + fPosition.xyz, 1.0);
         sampleScreen = uViewProj * sampleScreen;
         sampleScreen /= sampleScreen.w;

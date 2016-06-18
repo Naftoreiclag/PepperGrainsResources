@@ -1,13 +1,8 @@
 [
     {
-        "name" : "SquarePlate.model",
-        "type" : "model",
-        "file" : "SquarePlate.model"
-    },
-    {
-        "name" : "SquarePlate.geometry",
+        "name" : "Motor.geometry",
         "type" : "geometry",
-        "file" : "SquarePlate.fbx",
+        "file" : "Motor.fbx",
         "parameters" : {
             "pretransform" : true,
             "uvs" : {
@@ -22,34 +17,39 @@
         }
     },
     {
-        "name" : "SquareNormals.image",
+        "name" : "Motor.model",
+        "type" : "model",
+        "file" : "Motor.model"
+    },
+    {
+        "name" : "MotorNormals.image",
         "type" : "image",
-        "file" : "SquareNormals.png",
+        "file" : "MotorNormals.png",
         "parameters" : {
             "alphaCleave" : "lazy"
         }
     },
     {
-        "name" : "SquareNormals.texture",
+        "name" : "MotorNormals.texture",
         "type" : "texture",
-        "file" : "SquareNormals.texture"
+        "file" : "MotorNormals.texture"
     },
     {
-        "name" : "SquareDiffuse.image",
+        "name" : "MotorDiffuse.image",
         "type" : "image",
-        "file" : "SquareDiffuse.png",
+        "file" : "MotorDiffuse.png",
         "parameters" : {
             "alphaCleave" : "lazy"
         }
     },
     {
-        "name" : "SquareDiffuse.texture",
+        "name" : "MotorDiffuse.texture",
         "type" : "texture",
-        "file" : "SquareDiffuse.texture"
+        "file" : "MotorDiffuse.texture"
     },
     {
-        "name" : "Square.material",
+        "name" : "Motor.material",
         "type" : "material",
-        "file" : "Square.material"
+        "file" : "Motor.material"
     }
 ]
