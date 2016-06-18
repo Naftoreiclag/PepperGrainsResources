@@ -6,11 +6,15 @@ out vec3 fBright;
 
 uniform sampler2D gNormal;
 uniform sampler2D gDepth;
+uniform vec2 uDiskKernel[64];
 
 uniform sampler2DShadow gSunDepth0;
 uniform sampler2DShadow gSunDepth1;
 uniform sampler2DShadow gSunDepth2;
 uniform sampler2DShadow gSunDepth3;
+
+uniform sampler2D uNoiseTexture;
+uniform vec2 uNoiseRatio;
 
 uniform vec3 uCamLocation;
 uniform vec3 uDirection;
@@ -33,6 +37,7 @@ void main() {
     vec2 vUV = (vVertexPosition + 1.0) / 2.0;
     
     vec3 fNormal = texture(gNormal, vUV).xyz;
+    
     
     // Per-fragment depth value
     float fDepth = texture(gDepth, vUV).x; // Raw value
@@ -63,8 +68,8 @@ void main() {
     float extraShadeBias;
     
     if(fDepthLin < uCascadeFars[1]) {
-        minShadeBias = 0.0001;
-        extraShadeBias = 0.0001;
+        minShadeBias = 0.0003;
+        extraShadeBias = 0.0003;
     } else {
         minShadeBias = 0.001;
         extraShadeBias = 0.001;
@@ -73,12 +78,31 @@ void main() {
     float shadeBias = max(extraShadeBias * (1.0 - dot(fNormal, uDirection)), 0) + minShadeBias;
     
     float isInDirectSunlight = 0.0;
-    // PCF
+    vec2 noiseRotation = texture(uNoiseTexture, vUV * uNoiseRatio).xy / 2.f;
+    vec2 texelDimensions = 2.0 / textureSize(gSunDepth0, 0);
+    
+    for(int i = 0; i < 4; ++ i) {
+        vec3 potato = vec3((uDiskKernel[i] + noiseRotation) * 4.0 * texelDimensions + fPositionInSun.xy, fPositionInSun.z - shadeBias);
+        if(fDepthLin < uCascadeFars[0]) {
+            isInDirectSunlight += texture(gSunDepth0, potato);
+        } else if(fDepthLin < uCascadeFars[1]) {
+            isInDirectSunlight += texture(gSunDepth1, potato);
+        } else if(fDepthLin < uCascadeFars[2]) {
+            isInDirectSunlight += texture(gSunDepth2, potato);
+        } else if(fDepthLin < uCascadeFars[3]) {
+            isInDirectSunlight += texture(gSunDepth3, potato);
+        }
+    }
+    isInDirectSunlight /= 4;
+    
     /*
+    float isInDirectSunlight = 0.0;
+    vec2 noiseRotation = texture(uNoiseTexture, vUV * uNoiseRatio).xy / 2.f;
+    // PCF
     vec2 texelDimensions = 1.0 / textureSize(gSunDepth0, 0);
     for(int y = -1; y < 2; ++ y) {
         for(int x = -1; x < 2; ++ x) {
-            vec3 potato = vec3(vec2(x, y) * texelDimensions + fPositionInSun.xy, fPositionInSun.z - shadeBias);
+            vec3 potato = vec3((vec2(x, y) + noiseRotation) * texelDimensions + fPositionInSun.xy, fPositionInSun.z - shadeBias);
             if(fDepthLin < uCascadeFars[0]) {
                 isInDirectSunlight += texture(gSunDepth0, potato);
             } else if(fDepthLin < uCascadeFars[1]) {
@@ -92,7 +116,10 @@ void main() {
     }
     isInDirectSunlight /= 9;
     */
-    vec3 potato = vec3(fPositionInSun.xy, fPositionInSun.z - shadeBias);
+    
+    // Single sample
+    /*
+    vec3 potato = vec3(noiseRotation / 1000 + fPositionInSun.xy, fPositionInSun.z - shadeBias);
     if(fDepthLin < uCascadeFars[0]) {
         isInDirectSunlight += texture(gSunDepth0, potato);
     } else if(fDepthLin < uCascadeFars[1]) {
@@ -102,6 +129,7 @@ void main() {
     } else if(fDepthLin < uCascadeFars[3]) {
         isInDirectSunlight += texture(gSunDepth3, potato);
     }
+    */
     
     //isInDirectSunlight += texture(gSunDepth0, potato);
     

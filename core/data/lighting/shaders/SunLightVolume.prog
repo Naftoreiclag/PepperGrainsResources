@@ -16,12 +16,17 @@
             "sunDepth0" : "gSunDepth0",
             "sunDepth1" : "gSunDepth1",
             "sunDepth2" : "gSunDepth2",
-            "sunDepth3" : "gSunDepth3"
+            "sunDepth3" : "gSunDepth3",
+            "normalized2DNoise" : "uNoiseTexture"
         },
         "vec3" : {
             "direction" : "uDirection",
             "color" : "uColor",
             "cameraLocation" : "uCamLocation"
+        },
+        "vec2" : {
+            "normalized2DNoiseRatio" : "uNoiseRatio",
+            "diskKernel" : "uDiskKernel"
         },
         "float" : {
             "nearPlane" : "uNear"

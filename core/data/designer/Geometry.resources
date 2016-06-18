@@ -14,6 +14,34 @@
         }
     },
     {
+        "name" : "FlatSocket.geometry",
+        "type" : "geometry",
+        "file" : "FlatSocket.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "OmniSocket.geometry",
+        "type" : "geometry",
+        "file" : "OmniSocket.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
         "name" : "VertexBall.geometry",
         "type" : "geometry",
         "file" : "Vertex.fbx",
