@@ -1,5 +1,45 @@
 [
     {
+        "name" : "ConnectorPipe.geometry",
+        "type" : "geometry",
+        "file" : "ConnectorPipe.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "ConnectorPipe.model",
+        "type" : "model",
+        "file" : "ConnectorPipe.model"
+    },
+    {
+        "name" : "ConnectorPipeDiffuse.image",
+        "type" : "image",
+        "file" : "ConnectorPipeDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "ConnectorPipeDiffuse.texture",
+        "type" : "texture",
+        "file" : "ConnectorPipeDiffuse.texture"
+    },
+    {
+        "name" : "ConnectorPipe.material",
+        "type" : "material",
+        "file" : "ConnectorPipe.material"
+    },
+    {
         "name" : "ConnectorBase.geometry",
         "type" : "geometry",
         "file" : "ConnectorBase.fbx",

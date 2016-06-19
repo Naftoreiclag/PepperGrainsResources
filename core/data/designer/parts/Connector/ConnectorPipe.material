@@ -1,0 +1,6 @@
+{
+    "shaderProgram" : "SimpleTextured.shaderProgram",
+    "sampler2D" : {
+        "diffuseMap" : "ConnectorPipeDiffuse.texture"
+    }
+}

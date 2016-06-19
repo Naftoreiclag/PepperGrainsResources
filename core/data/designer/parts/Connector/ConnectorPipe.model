@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "ConnectorPipe.geometry",
+            "material" : "ConnectorPipe.material"
+        }
+    ]
+}
