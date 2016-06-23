@@ -1,0 +1,55 @@
+[
+    {
+        "name" : "Wheel.geometry",
+        "type" : "geometry",
+        "file" : "Wheel.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "Wheel.model",
+        "type" : "model",
+        "file" : "Wheel.model"
+    },
+    {
+        "name" : "WheelNormals.image",
+        "type" : "image",
+        "file" : "WheelNormals.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "WheelNormals.texture",
+        "type" : "texture",
+        "file" : "WheelNormals.texture"
+    },
+    {
+        "name" : "WheelDiffuse.image",
+        "type" : "image",
+        "file" : "WheelDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "WheelDiffuse.texture",
+        "type" : "texture",
+        "file" : "WheelDiffuse.texture"
+    },
+    {
+        "name" : "Wheel.material",
+        "type" : "material",
+        "file" : "Wheel.material"
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "MotorStrut.geometry",
+            "material" : "MotorStrut.material"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "name" : "Core.geometry",
+        "type" : "geometry",
+        "file" : "Core.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "Core.model",
+        "type" : "model",
+        "file" : "Core.model"
+    },
+    {
+        "name" : "CoreDiffuse.image",
+        "type" : "image",
+        "file" : "CoreDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "CoreDiffuse.texture",
+        "type" : "texture",
+        "file" : "CoreDiffuse.texture"
+    },
+    {
+        "name" : "Core.material",
+        "type" : "material",
+        "file" : "Core.material"
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "solids" : [
+        {
+            "geometry" : "Wheel.geometry",
+            "material" : "Wheel.material"
+        }
+    ]
+}

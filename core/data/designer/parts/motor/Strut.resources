@@ -1,0 +1,55 @@
+[
+    {
+        "name" : "MotorStrut.geometry",
+        "type" : "geometry",
+        "file" : "Strut.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
+    },
+    {
+        "name" : "MotorStrut.model",
+        "type" : "model",
+        "file" : "Strut.model"
+    },
+    {
+        "name" : "MotorStrutNormals.image",
+        "type" : "image",
+        "file" : "StrutNormals.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "MotorStrutNormals.texture",
+        "type" : "texture",
+        "file" : "StrutNormals.texture"
+    },
+    {
+        "name" : "MotorStrutDiffuse.image",
+        "type" : "image",
+        "file" : "StrutDiffuse.png",
+        "parameters" : {
+            "alphaCleave" : "lazy"
+        }
+    },
+    {
+        "name" : "MotorStrutDiffuse.texture",
+        "type" : "texture",
+        "file" : "StrutDiffuse.texture"
+    },
+    {
+        "name" : "MotorStrut.material",
+        "type" : "material",
+        "file" : "Strut.material"
+    }
+]
