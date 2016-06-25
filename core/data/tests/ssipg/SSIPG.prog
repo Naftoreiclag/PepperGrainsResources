@@ -1,0 +1,25 @@
+{
+    "link" : [
+        "SSIPG.vertexShader",
+        "SSIPG.geometryShader",
+        "SSIPG.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuseMap" : "diffuseMap"
+        }
+    },
+    "output" : {
+        "diffuse" : "fColor",
+        "normal" : "fNormal"
+    }
+}

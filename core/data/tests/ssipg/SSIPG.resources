@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "SSIPG.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "SSIPG.vert"
+    },
+    {
+        "name" : "SSIPGTest.model",
+        "type" : "model",
+        "file" : "SSIPGTest.model"
+    },
+    {
+        "name" : "SSIPGTest.material",
+        "type" : "material",
+        "file" : "SSIPGTest.material"
+    },
+    {
+        "name" : "SSIPG.geometryShader",
+        "type" : "geometry-shader",
+        "file" : "SSIPG.geom"
+    },
+    {
+        "name" : "SSIPG.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "SSIPG.frag"
+    },
+    {
+        "name" : "SSIPG.shaderProgram",
+        "type" : "shader-program",
+        "file" : "SSIPG.prog"
+    }
+]
