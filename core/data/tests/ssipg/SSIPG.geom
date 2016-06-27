@@ -13,7 +13,7 @@ out vec2 gUV;
 out float gTriNDCDoubleArea;
 out vec2 gTriNDCxy[3];
 out float gTriInvLinearZ[3];
-out vec2 gTriUV[3];
+out vec2 gTriUVPremult[3];
 
 float linearizeDepth(float z) {
     float uNear = 0.2;
@@ -27,7 +27,7 @@ void main() {
     for(int j = 0; j < 3; ++ j) {
         gTriNDCxy[j] = gl_in[j].gl_Position.xy / gl_in[j].gl_Position.w;
         gTriInvLinearZ[j] = 1.0 / linearizeDepth(gl_in[j].gl_Position.z / gl_in[j].gl_Position.w);
-        gTriUV[j] = vUV[j];
+        gTriUVPremult[j] = vUV[j] * gTriInvLinearZ[j];
     }
     
     vec2 edge01 = gTriNDCxy[1] - gTriNDCxy[0];

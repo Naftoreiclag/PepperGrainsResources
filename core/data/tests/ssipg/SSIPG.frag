@@ -5,7 +5,7 @@ in vec2 gUV;
 
 in vec2 gTriNDCxy[3];
 in float gTriInvLinearZ[3];
-in vec2 gTriUV[3];
+in vec2 gTriUVPremult[3];
 
 in float gTriNDCDoubleArea;
 
@@ -36,8 +36,8 @@ void main() {
     
     vec3 bary = barycentric(fNDC.xy);
     
-    float u = ((gTriUV[0].x * gTriInvLinearZ[0]) * bary[0]) + ((gTriUV[1].x * gTriInvLinearZ[1]) * bary[1]) + ((gTriUV[2].x * gTriInvLinearZ[2]) * bary[2]);
-    float v = ((gTriUV[0].y * gTriInvLinearZ[0]) * bary[0]) + ((gTriUV[1].y * gTriInvLinearZ[1]) * bary[1]) + ((gTriUV[2].y * gTriInvLinearZ[2]) * bary[2]);
+    float u = (gTriUVPremult[0].x * bary[0]) + (gTriUVPremult[1].x * bary[1]) + (gTriUVPremult[2].x * bary[2]);
+    float v = (gTriUVPremult[0].y * bary[0]) + (gTriUVPremult[1].y * bary[1]) + (gTriUVPremult[2].y * bary[2]);
     
     float magic = bary[0] * gTriInvLinearZ[0] + bary[1] * gTriInvLinearZ[1] + bary[2] * gTriInvLinearZ[2];
     
