@@ -1,0 +1,9 @@
+{
+    "image" : "SSIPGTest.image",
+    "internalFormat" : "R8",
+    "pixelFormat" : "RED",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "clampToEdge",
+    "wrapY" : "clampToEdge"
+}

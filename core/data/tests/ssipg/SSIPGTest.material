@@ -1,6 +1,6 @@
 {
     "shaderProgram" : "SSIPG.shaderProgram",
     "sampler2D" : {
-        "diffuseMap" : "GrnJelly.texture"
+        "diffuseMap" : "SSIPGTest.texture"
     }
 }

@@ -28,5 +28,26 @@
         "name" : "SSIPG.shaderProgram",
         "type" : "shader-program",
         "file" : "SSIPG.prog"
+    },
+    {
+        "name" : "SSIPGTest.image",
+        "type" : "image",
+        "file" : "Points.png",
+        "parameters" : {
+            "distanceField" : {
+                "absolute" : true,
+                "width" : 256,
+                "height" : 256,
+                "inside" : 0,
+                "outside" : 0.1,
+                "edgeValue" : 1.0,
+                "channel" : 0
+            }
+        }
+    },
+    {
+        "name" : "SSIPGTest.texture",
+        "type" : "texture",
+        "file" : "SSIPGTest.texture"
     }
 ]
