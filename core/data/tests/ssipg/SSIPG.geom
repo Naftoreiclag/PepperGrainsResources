@@ -2,7 +2,8 @@
 layout(triangles) in;
 layout(triangle_strip, max_vertices = 3) out;
 
-in vec3 vNormal[];
+in vec3 vModelPos[];
+in vec3 vWorldNormal[];
 in vec2 vUV[];
 
 out vec3 gNormal;
@@ -14,6 +15,9 @@ out float gTriNDCDoubleArea;
 out vec2 gTriNDCxy[3];
 out float gTriInvLinearZ[3];
 out vec2 gTriUVPremult[3];
+out vec2 gTriUV[3];
+out vec3 gTriPosition[3];
+out vec3 gTriModelPos[3];
 
 float linearizeDepth(float z) {
     float uNear = 0.2;
@@ -27,7 +31,10 @@ void main() {
     for(int j = 0; j < 3; ++ j) {
         gTriNDCxy[j] = gl_in[j].gl_Position.xy / gl_in[j].gl_Position.w;
         gTriInvLinearZ[j] = 1.0 / linearizeDepth(gl_in[j].gl_Position.z / gl_in[j].gl_Position.w);
+        gTriUV[j] = vUV[j];
+        gTriPosition[j] = gl_in[j].gl_Position.xyz;
         gTriUVPremult[j] = vUV[j] * gTriInvLinearZ[j];
+        gTriModelPos[j] = vModelPos[j];
     }
     
     vec2 edge01 = gTriNDCxy[1] - gTriNDCxy[0];
@@ -36,7 +43,7 @@ void main() {
     gTriNDCDoubleArea = edge01.x * edge02.y - edge01.y * edge02.x;
 
     for(int i = 0; i < 3; ++ i) {
-        gNormal = vNormal[i];
+        gNormal = vWorldNormal[i];
         gUV = vUV[i];
         gPosition = gl_in[i].gl_Position;
         gl_Position = gl_in[i].gl_Position;

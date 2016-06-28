@@ -3,14 +3,16 @@ in vec3 iPosition;
 in vec3 iNormal;
 in vec2 iUV;
 
-out vec3 vNormal;
+out vec3 vModelPos;
+out vec3 vWorldNormal;
 out vec2 vUV;
 
 uniform mat4 uModel;
 uniform mat4 uMVP;
 
 void main() {
+    vModelPos = iPosition;
     gl_Position = uMVP * vec4(iPosition, 1.0);
     vUV = iUV;
-    vNormal = (uModel * vec4(iNormal, 0.0)).xyz;
+    vWorldNormal = (uModel * vec4(iNormal, 0.0)).xyz;
 }

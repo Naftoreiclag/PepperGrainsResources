@@ -6,8 +6,13 @@ in vec2 gUV;
 in vec2 gTriNDCxy[3];
 in float gTriInvLinearZ[3];
 in vec2 gTriUVPremult[3];
+in vec3 gTriPosition[3];
+in vec3 gTriModelPos[3];
+in vec2 gTriUV[3];
 
 in float gTriNDCDoubleArea;
+
+uniform mat4 uMVP;
 
 //uniform vec2 uPixelSize;
 
@@ -26,12 +31,49 @@ vec3 barycentric(vec2 ndc) {
         doubleTriangleArea(gTriNDCxy[0], gTriNDCxy[1], ndc) / gTriNDCDoubleArea);
 }
 
+vec3 barycentricUV(vec2 uv) {
+    float gTriUVDoubleArea = doubleTriangleArea(gTriUV[0], gTriUV[1], gTriUV[2]);
+    
+    return vec3(
+        doubleTriangleArea(gTriUV[1], gTriUV[2], uv) / gTriUVDoubleArea, 
+        doubleTriangleArea(gTriUV[2], gTriUV[0], uv) / gTriUVDoubleArea, 
+        doubleTriangleArea(gTriUV[0], gTriUV[1], uv) / gTriUVDoubleArea);
+}
+
 void main() {
     vec2 uPixelSize = vec2(1.0 / 1280.0, 1.0 / 720.0);
     
-    vec2 fNDCxy = gPosition.xy / gPosition.w;
-    float fIntensity = texture(diffuseMap, gUV).r;
     
+    vec2 fNDCxy = gPosition.xy / gPosition.w;
+    vec2 fDirection = texture(diffuseMap, gUV).rg;
+    fDirection = (fDirection * 2.0) - 1.0;
+    
+    // Temporary?
+    fDirection /= 2.0;
+    
+    vec2 trueUV = gUV + fDirection;
+    
+    vec3 bary = barycentricUV(trueUV);
+    
+    vec4 potato = vec4(gTriModelPos[0] * bary[0] + gTriModelPos[1] * bary[1] + gTriModelPos[2] * bary[2], 1.0);
+    /*
+        gTriPosition[0] * bary[0], 
+        gTriPosition[1] * bary[1], 
+        gTriPosition[2] * bary[2], 
+        1.0);
+        */
+    vec4 ndcPos = uMVP * potato;
+    ndcPos /= ndcPos.w;
+    
+    if(abs(ndcPos.x - fNDCxy.x) <= uPixelSize.x * 2 && abs(ndcPos.y - fNDCxy.y) <= uPixelSize.y * 2) {
+        fragColor = vec3(1.0, 1.0, 1.0);
+    } else {
+        fragColor = vec3(0.0, 0.0, 0.0);
+    }
+    
+    //fragColor = vec3(fDirection, 0.0);
+    
+    /*
     if(fIntensity < 0.9) {
         fragColor = vec3(0.0, 0.0, 0.0);
     }
@@ -63,4 +105,5 @@ void main() {
             fragColor = vec3(0.0, 0.0, 0.0);
         }
     }
+    */
 }
