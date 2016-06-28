@@ -34,13 +34,10 @@
         "type" : "image",
         "file" : "Points.png",
         "parameters" : {
-            "distanceField" : {
+            "ssipgField" : {
                 "absolute" : true,
-                "width" : 256,
-                "height" : 256,
-                "inside" : 0,
-                "outside" : 0.1,
-                "edgeValue" : 1.0,
+                "width" : 512,
+                "height" : 512,
                 "channel" : 0
             }
         }

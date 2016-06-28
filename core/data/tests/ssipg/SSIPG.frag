@@ -9,7 +9,7 @@ in vec2 gTriUVPremult[3];
 
 in float gTriNDCDoubleArea;
 
-//uniform vec2 uInverseScreenSize;
+//uniform vec2 uPixelSize;
 
 out vec3 fragColor;
 
@@ -27,15 +27,40 @@ vec3 barycentric(vec2 ndc) {
 }
 
 void main() {
-    vec2 uInverseScreenSize = vec2(1.0 / 1280.0, 1.0 / 720.0);
+    vec2 uPixelSize = vec2(1.0 / 1280.0, 1.0 / 720.0);
     
     vec2 fNDCxy = gPosition.xy / gPosition.w;
-    fNDCxy += uInverseScreenSize;
+    float fIntensity = texture(diffuseMap, gUV).r;
     
-    vec3 bary = barycentric(fNDCxy);
-    
-    vec2 nUV = (gTriUVPremult[0] * bary[0] + gTriUVPremult[1] * bary[1] + gTriUVPremult[2] * bary[2]) / 
-              (gTriInvLinearZ[0] * bary[0] + gTriInvLinearZ[1] * bary[1] + gTriInvLinearZ[2] * bary[2]);
-    
-    fragColor = texture(diffuseMap, nUV).rgb + (texture(diffuseMap, gUV).rgb - texture(diffuseMap, nUV).rgb) * 10.0;
+    if(fIntensity < 0.9) {
+        fragColor = vec3(0.0, 0.0, 0.0);
+    }
+    else {
+        bool output = true;
+        for(int xo = -1; xo <= 1; ++ xo) {
+            for(int yo = -1; yo <= 1; ++ yo) {
+                if(xo != 0 && yo != 0) {
+                    vec3 bary = barycentric(vec2(fNDCxy.x + uPixelSize.x * xo, fNDCxy.y + uPixelSize.y * yo));
+                    vec2 nUV = (gTriUVPremult[0] * bary[0] + gTriUVPremult[1] * bary[1] + gTriUVPremult[2] * bary[2]) / 
+                              (gTriInvLinearZ[0] * bary[0] + gTriInvLinearZ[1] * bary[1] + gTriInvLinearZ[2] * bary[2]);
+                    
+                    float intensity = texture(diffuseMap, nUV).r;
+                    
+                    if(intensity > fIntensity) {
+                        output = false;
+                        break;
+                    }
+                }
+            }
+            if(!output) {
+                break;
+            }
+        }
+        
+        if(output) {
+            fragColor = vec3(1.0, 1.0, 1.0);
+        } else {
+            fragColor = vec3(0.0, 0.0, 0.0);
+        }
+    }
 }

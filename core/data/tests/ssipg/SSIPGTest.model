@@ -1,7 +1,7 @@
 {
     "solids" : [
         {
-            "geometry" : "Door.geometry",
+            "geometry" : "Cube.geometry",
             "material" : "SSIPGTest.material"
         }
     ]

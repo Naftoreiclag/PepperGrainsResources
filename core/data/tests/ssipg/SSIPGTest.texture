@@ -1,7 +1,7 @@
 {
     "image" : "SSIPGTest.image",
-    "internalFormat" : "R8",
-    "pixelFormat" : "RED",
+    "internalFormat" : "RGB8",
+    "pixelFormat" : "RGB",
     "minFilter" : "linear",
     "magFilter" : "linear",
     "wrapX" : "clampToEdge",
