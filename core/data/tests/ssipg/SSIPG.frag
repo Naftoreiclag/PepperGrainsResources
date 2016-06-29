@@ -45,13 +45,15 @@ void main() {
     
     
     vec2 fNDCxy = gPosition.xy / gPosition.w;
+    /*
     vec2 fDirection = texture(diffuseMap, gUV).rg;
     fDirection = (fDirection * 2.0) - 1.0;
     
     // Temporary?
     fDirection /= 2.0;
+    */
     
-    vec2 trueUV = gUV + fDirection;
+    vec2 trueUV = texture(diffuseMap, gUV).rg;
     
     vec3 bary = barycentricUV(trueUV);
     

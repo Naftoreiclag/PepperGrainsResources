@@ -34,7 +34,7 @@
         "type" : "image",
         "file" : "Points.png",
         "parameters" : {
-            "ssipgField" : {
+            "voronoi" : {
                 "absolute" : true,
                 "width" : 512,
                 "height" : 512,
