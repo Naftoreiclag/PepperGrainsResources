@@ -1,7 +1,7 @@
 {
     "solids" : [
         {
-            "geometry" : "Cube.geometry",
+            "geometry" : "SmoothTorus.geometry",
             "material" : "SSIPGTest.material"
         }
     ]

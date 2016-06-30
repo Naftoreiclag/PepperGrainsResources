@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "ConnectorBaseDiffuse.texture",
-        "normalMap" : "ConnectorBaseNormals.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "ConnectorBaseDiffuse.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "ConnectorBaseNormals.texture"
+            }
+        }
+    ]
 }

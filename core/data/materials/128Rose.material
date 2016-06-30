@@ -1,6 +1,11 @@
 {
-    "shaderProgram" : "SimpleTextured.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "128Rose.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "128Rose.texture"
+            }
+        }
+    ]
 }

@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "Hatch.texture",
-        "normalMap" : "DoorNormals.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "Hatch.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "DoorNormals.texture"
+            }
+        }
+    ]
 }

@@ -1,0 +1,27 @@
+{
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "MyDiffuse.texture"
+            },
+            "specular" : {
+                "type" : "texture",
+                "value" : "MyDiffuse.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "MyNormals.texture"
+            },
+            "ssipg-map" : {
+                "type" : "texture",
+                "value" : "MySSIPGMap.texture"
+            },
+            "ssipg-flow" : {
+                "type" : "texture",
+                "value" : "MySSIPGFlow.texture"
+            }
+        }
+    ]
+}

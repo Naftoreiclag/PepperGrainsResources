@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "MotorStrutDiffuse.texture",
-        "normalMap" : "MotorStrutNormals.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "MotorStrutDiffuse.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "MotorStrutNormals.texture"
+            }
+        }
+    ]
 }

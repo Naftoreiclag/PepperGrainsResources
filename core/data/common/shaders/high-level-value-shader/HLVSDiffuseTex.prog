@@ -1,0 +1,24 @@
+{
+    "link" : [
+        "HLVSDiffuseTex.vertexShader",
+        "HLVSDiffuseTex.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
+    },
+    "matrices" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuse" : "uDiffuse"
+        }
+    },
+    "output" : {
+        "diffuse" : "fDiffuse",
+        "normal" : "fNormal"
+    }
+}

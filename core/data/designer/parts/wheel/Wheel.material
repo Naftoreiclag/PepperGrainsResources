@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "WheelDiffuse.texture",
-        "normalMap" : "WheelNormals.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "WheelDiffuse.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "WheelNormals.texture"
+            }
+        }
+    ]
 }

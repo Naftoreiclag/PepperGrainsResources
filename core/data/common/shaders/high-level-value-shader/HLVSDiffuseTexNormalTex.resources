@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "HLVSDiffuseTexNormalTex.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "HLVSDiffuseTexNormalTex.vert"
+    },
+    {
+        "name" : "HLVSDiffuseTexNormalTex.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "HLVSDiffuseTexNormalTex.frag"
+    },
+    {
+        "name" : "HLVSDiffuseTexNormalTex.shaderProgram",
+        "type" : "shader-program",
+        "file" : "HLVSDiffuseTexNormalTex.prog"
+    }
+]

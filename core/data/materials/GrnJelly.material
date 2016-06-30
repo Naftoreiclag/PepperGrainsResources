@@ -1,6 +1,11 @@
 {
-    "shaderProgram" : "SimpleTextured.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "GrnJelly.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "GrnJelly.texture"
+            }
+        }
+    ]
 }

@@ -1,6 +1,11 @@
 {
-    "shaderProgram" : "SimpleTextured.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "ConnectorPipeDiffuse.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "ConnectorPipeDiffuse.texture"
+            }
+        }
+    ]
 }

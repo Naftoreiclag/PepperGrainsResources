@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "SquareDiffuse.texture",
-        "normalMap" : "SquareNormals.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "SquareDiffuse.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "SquareNormals.texture"
+            }
+        }
+    ]
 }

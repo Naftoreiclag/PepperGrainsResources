@@ -1,7 +1,15 @@
 {
-    "shaderProgram" : "TestNormalMap.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "GrnJelly.texture",
-        "normalMap" : "NormalMapTest.texture"
-    }
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "GrnJelly.texture"
+            },
+            "normals" : {
+                "type" : "texture",
+                "value" : "NormalMapTest.texture"
+            }
+        }
+    ]
 }
