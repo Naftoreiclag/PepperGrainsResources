@@ -20,18 +20,8 @@
         "file" : "NormalMapTest.material"
     },
     {
-        "name" : "Slime.material",
-        "type" : "material",
-        "file" : "Slime.material"
-    },
-    {
         "name" : "GrnJelly.material",
         "type" : "material",
         "file" : "GrnJelly.material"
-    },
-    {
-        "name" : "Red.material",
-        "type" : "material",
-        "file" : "Red.material"
     }
 ]
