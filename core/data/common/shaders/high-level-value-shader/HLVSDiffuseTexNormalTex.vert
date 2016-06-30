@@ -5,7 +5,6 @@ in vec2 iUV;
 in vec3 iTangent;
 in vec3 iBitangent;
 
-out vec3 vPosition;
 out vec2 vUV;
 out mat3 vTBN;
 
@@ -14,8 +13,6 @@ uniform mat4 uMVP;
 
 void main() {
     gl_Position = uMVP * vec4(iPosition, 1.0);
-    vPosition = (uModel * vec4(iPosition, 1.0)).xyz;
-    
     vUV = iUV;
     
     vec3 vTangent = normalize((uModel * vec4(iTangent, 0.0)).xyz);

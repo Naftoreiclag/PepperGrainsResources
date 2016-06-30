@@ -14,7 +14,7 @@ uniform mat4 uInvViewProj;
 
 void main() {
     vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
-    vec3 fNormal = texture(gNormal, vUV).xyz;
+    vec3 fNormal = texture(gNormal, vUV).xyz * 0.5 + 0.5;
     vec3 fBright = texture(gBright, vUV).xyz;
     float fDepth = texture(gDepth, vUV).x;
     /*
