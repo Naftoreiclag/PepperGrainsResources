@@ -1,0 +1,9 @@
+{
+    "image" : "SSIPGTestDiffuse.image",
+    "internalFormat" : "SRGB8",
+    "pixelFormat" : "RGB",
+    "minFilter" : "linear",
+    "magFilter" : "linear",
+    "wrapX" : "clampToEdge",
+    "wrapY" : "clampToEdge"
+}

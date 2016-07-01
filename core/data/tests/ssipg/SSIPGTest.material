@@ -1,6 +1,0 @@
-{
-    "shaderProgram" : "SSIPG.shaderProgram",
-    "sampler2D" : {
-        "diffuseMap" : "SSIPGTest.texture"
-    }
-}

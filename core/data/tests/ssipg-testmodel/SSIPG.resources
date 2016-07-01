@@ -1,0 +1,45 @@
+[
+    {
+        "name" : "MangledTorus.geometry",
+        "type" : "geometry",
+        "file" : "MangledTorus.fbx"
+    },
+    {
+        "name" : "SSIPGTest.model",
+        "type" : "model",
+        "file" : "SSIPGTest.model"
+    },
+    {
+        "name" : "SSIPGTest.material",
+        "type" : "material",
+        "file" : "SSIPGTest.material"
+    },
+    {
+        "name" : "SSIPGTestMap.image",
+        "type" : "image",
+        "file" : "Points.png",
+        "parameters" : {
+            "voronoi" : {
+                "absolute" : true,
+                "width" : 512,
+                "height" : 512,
+                "channel" : 0
+            }
+        }
+    },
+    {
+        "name" : "SSIPGTestDiffuse.image",
+        "type" : "image",
+        "file" : "Diffuse.jpg"
+    },
+    {
+        "name" : "SSIPGTestMap.texture",
+        "type" : "texture",
+        "file" : "SSIPGTestMap.texture"
+    },
+    {
+        "name" : "SSIPGTestDiffuse.texture",
+        "type" : "texture",
+        "file" : "SSIPGTestDiffuse.texture"
+    }
+]

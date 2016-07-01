@@ -5,16 +5,6 @@
         "file" : "SSIPG.vert"
     },
     {
-        "name" : "SSIPGTest.model",
-        "type" : "model",
-        "file" : "SSIPGTest.model"
-    },
-    {
-        "name" : "SSIPGTest.material",
-        "type" : "material",
-        "file" : "SSIPGTest.material"
-    },
-    {
         "name" : "SSIPG.geometryShader",
         "type" : "geometry-shader",
         "file" : "SSIPG.geom"
@@ -28,23 +18,5 @@
         "name" : "SSIPG.shaderProgram",
         "type" : "shader-program",
         "file" : "SSIPG.prog"
-    },
-    {
-        "name" : "SSIPGTest.image",
-        "type" : "image",
-        "file" : "Points.png",
-        "parameters" : {
-            "voronoi" : {
-                "absolute" : true,
-                "width" : 512,
-                "height" : 512,
-                "channel" : 0
-            }
-        }
-    },
-    {
-        "name" : "SSIPGTest.texture",
-        "type" : "texture",
-        "file" : "SSIPGTest.texture"
     }
 ]

@@ -1,0 +1,19 @@
+{
+    "techniques" : [
+        {
+            "type" : "high-level-values",
+            "diffuse" : {
+                "type" : "texture",
+                "value" : "GrnJelly.texture"
+            },
+            "ssipg-map" : {
+                "type" : "texture",
+                "value" : "SSIPGTestMap.texture"
+            },
+            "ssipg-flow" : {
+                "type" : "texture",
+                "value" : "SSIPGTestMap.texture"
+            }
+        }
+    ]
+}
