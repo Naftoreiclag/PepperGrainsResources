@@ -7,7 +7,7 @@
         "position" : "position",
         "uv" : "texCoord"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "model" : "uModel",
         "view" : "uView",
         "projection" : "uProj"

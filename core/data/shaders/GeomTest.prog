@@ -7,7 +7,7 @@
     "attributes" : {
         "position" : "position"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "model" : "uModel",
         "view" : "uView",
         "projection" : "uProj"

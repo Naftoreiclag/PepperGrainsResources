@@ -14,7 +14,7 @@ in float gTriNDCDoubleArea;
 
 uniform mat4 uMVP;
 
-//uniform vec2 uPixelSize;
+uniform vec2 uPixelSize;
 
 out vec3 fragColor;
 
@@ -39,11 +39,12 @@ void main() {
     trueNDC /= trueNDC.w;
     
     vec2 fNDC = gPosition.xy / gPosition.w;
-    vec2 uPixelSize = vec2(1.0 / 1280.0, 1.0 / 720.0);
+    //vec2 uPixelSize = vec2(1.0 / (1280.0 / 2.0), 1.0 / (720.0 / 2.0));
     
-    if(abs(trueNDC.x - fNDC.x) <= uPixelSize.x * 2 && abs(trueNDC.y - fNDC.y) <= uPixelSize.y * 2) {
+    if(abs(trueNDC.x - fNDC.x) <= uPixelSize.x && abs(trueNDC.y - fNDC.y) <= uPixelSize.y) {
         fragColor = vec3(1.0, 1.0, 1.0);
     } else {
-        fragColor = vec3(0.0, 0.0, 0.0);
+        discard;
+        //fragColor = vec3(0.0, 0.0, 0.0);
     }
 }

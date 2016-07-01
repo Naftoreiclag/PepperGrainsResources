@@ -10,7 +10,7 @@
         "tangent" : "iTangent",
         "bitangent" : "iBitangent"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "model" : "uModel",
         "modelViewProjection" : "uMVP"
     },

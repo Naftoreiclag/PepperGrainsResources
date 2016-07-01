@@ -5,7 +5,7 @@
     "attributes" : {
         "position" : "iVertexPosition"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "viewProjection" : "uViewProjection"
     },
     "controls" : {

@@ -7,7 +7,7 @@
         "position" : "iVertexPosition",
         "normal" : "iVertexNormal"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "model" : "uModel",
         "modelViewProjection" : "uMVP"
     },

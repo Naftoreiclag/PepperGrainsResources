@@ -6,7 +6,7 @@
     "attributes" : {
         "position" : "iVertexPosition"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "modelViewProjection" : "uMVP"
     },
     "controls" : {

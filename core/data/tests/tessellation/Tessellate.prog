@@ -8,7 +8,7 @@
     "attributes" : {
         "position" : "iPosition"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "modelViewProjection" : "uMVP"
     },
     "controls" : {

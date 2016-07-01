@@ -8,7 +8,7 @@
         "normal" : "iNormal",
         "uv" : "iUV"
     },
-    "matrices" : {
+    "pass-uniforms" : {
         "model" : "uModel",
         "view" : "uView",
         "projection" : "uProj"
