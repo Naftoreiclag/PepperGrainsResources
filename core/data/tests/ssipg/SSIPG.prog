@@ -15,7 +15,7 @@
     },
     "controls" : {
         "sampler2D" : {
-            "diffuseMap" : "diffuseMap"
+            "spots" : "uSpots"
         }
     },
     "output" : {

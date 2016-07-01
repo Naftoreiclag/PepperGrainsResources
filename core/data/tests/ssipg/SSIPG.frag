@@ -18,7 +18,7 @@ uniform mat4 uMVP;
 
 out vec3 fragColor;
 
-uniform sampler2D diffuseMap;
+uniform sampler2D uSpots;
 
 float doubleTriangleArea(vec2 begin, vec2 end, vec2 pos) {
     return (pos.x - begin.x) * (end.y - begin.y) - (pos.y - begin.y) * (end.x - begin.x);
@@ -34,7 +34,7 @@ vec3 trueBarycentricUV(vec2 uv) {
 }
 
 void main() {
-    vec3 trueBary = trueBarycentricUV(texture(diffuseMap, gUV).rg);
+    vec3 trueBary = trueBarycentricUV(texture(uSpots, gUV).rg);
     vec4 trueNDC = uMVP * vec4(gTriModelPos[0] * trueBary[0] + gTriModelPos[1] * trueBary[1] + gTriModelPos[2] * trueBary[2], 1.0);
     trueNDC /= trueNDC.w;
     

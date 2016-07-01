@@ -30,7 +30,7 @@
     {
         "name" : "SSIPGTestDiffuse.image",
         "type" : "image",
-        "file" : "Diffuse.jpg"
+        "file" : "../../images/Green.png"
     },
     {
         "name" : "SSIPGTestMap.texture",

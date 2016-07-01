@@ -1,5 +1,5 @@
 {
-    "image" : "SSIPGTest.image",
+    "image" : "SSIPGTestMap.image",
     "internalFormat" : "RGB8",
     "pixelFormat" : "RGB",
     "minFilter" : "nearest",

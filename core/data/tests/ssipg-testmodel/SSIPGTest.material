@@ -4,9 +4,9 @@
             "type" : "high-level-values",
             "diffuse" : {
                 "type" : "texture",
-                "value" : "GrnJelly.texture"
+                "value" : "SSIPGTestDiffuse.texture"
             },
-            "ssipg-map" : {
+            "ssipg-spots" : {
                 "type" : "texture",
                 "value" : "SSIPGTestMap.texture"
             },
