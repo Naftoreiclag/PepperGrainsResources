@@ -4,8 +4,6 @@ in vec4 gPosition;
 in vec2 gUV;
 
 in vec2 gTriNDCxy[3];
-in float gTriInvLinearZ[3];
-in vec2 gTriUVPremult[3];
 in vec3 gTriPosition[3];
 in vec3 gTriModelPos[3];
 in vec2 gTriUV[3];
@@ -14,7 +12,8 @@ in float gTriNDCDoubleArea;
 
 uniform mat4 uMVP;
 
-uniform vec2 uPixelSize;
+uniform vec2 uScreenSize;
+uniform vec3 uCamDir;
 
 out vec3 fragColor;
 
@@ -34,17 +33,30 @@ vec3 trueBarycentricUV(vec2 uv) {
 }
 
 void main() {
-    vec3 trueBary = trueBarycentricUV(texture(uSpots, gUV).rg);
+    vec2 trueUV = texture(uSpots, gUV).rg;
+    
+    // Bias???
+    trueUV.x += 1.5 / 512.0;
+    trueUV.y += 1.5 / 512.0;
+    
+    vec3 trueBary = trueBarycentricUV(trueUV);
     vec4 trueNDC = uMVP * vec4(gTriModelPos[0] * trueBary[0] + gTriModelPos[1] * trueBary[1] + gTriModelPos[2] * trueBary[2], 1.0);
     trueNDC /= trueNDC.w;
     
     vec2 fNDC = gPosition.xy / gPosition.w;
-    //vec2 uPixelSize = vec2(1.0 / (1280.0 / 2.0), 1.0 / (720.0 / 2.0));
     
-    if(abs(trueNDC.x - fNDC.x) <= uPixelSize.x && abs(trueNDC.y - fNDC.y) <= uPixelSize.y) {
+    vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
+    
+    if(abs(displacement.x) <= 1.0 && abs(displacement.y) <= 1.0) {
         fragColor = vec3(1.0, 1.0, 1.0);
     } else {
-        discard;
-        //fragColor = vec3(0.0, 0.0, 0.0);
+        fragColor = vec3(texture(uSpots, gUV).rg * 0.5, 0.0);
+        //fragColor = vec3(abs(displacement.x) * 0.1, abs(displacement.y) * 0.1, 0.0);
+        /*
+        if(dot(gNormal, -uCamDir) < 0.3) {
+            discard;
+        } else {
+            fragColor = vec3(0.0, 0.0, 0.0);
+        }*/
     }
 }

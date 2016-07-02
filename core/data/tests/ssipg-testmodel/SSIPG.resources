@@ -5,6 +5,11 @@
         "file" : "MangledTorus.fbx"
     },
     {
+        "name" : "UVSphere.geometry",
+        "type" : "geometry",
+        "file" : "UVSphere.fbx"
+    },
+    {
         "name" : "SSIPGTest.model",
         "type" : "model",
         "file" : "SSIPGTest.model"

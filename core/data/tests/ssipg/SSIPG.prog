@@ -12,7 +12,8 @@
     "pass-uniforms" : {
         "model" : "uModel",
         "modelViewProjection" : "uMVP",
-        "inverseScreenSize" : "uPixelSize"
+        "screenSize" : "uScreenSize",
+        "cameraDirection" : "uCamDir"
     },
     "controls" : {
         "sampler2D" : {

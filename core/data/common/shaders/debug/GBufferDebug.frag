@@ -26,7 +26,7 @@ void main() {
     //fDiffuse = pow(fDiffuse, vec3(1.0 / 2.2));
     
     // Tone mapping to show high-intensity lights
-    fBright = fBright / (fBright + vec3(1.0));
+    //fBright = fBright / (fBright + vec3(1.0));
     
     oColor = (
         fDiffuse * uShowWhat.x + 
