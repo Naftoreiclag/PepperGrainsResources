@@ -36,8 +36,8 @@ void main() {
     vec2 trueUV = texture(uSpots, gUV).rg;
     
     // Bias???
-    trueUV.x += 1.5 / 512.0;
-    trueUV.y += 1.5 / 512.0;
+    //trueUV.x += 0.5 / 512.0;
+    //trueUV.y += 0.5 / 512.0;
     
     vec3 trueBary = trueBarycentricUV(trueUV);
     vec4 trueNDC = uMVP * vec4(gTriModelPos[0] * trueBary[0] + gTriModelPos[1] * trueBary[1] + gTriModelPos[2] * trueBary[2], 1.0);
@@ -50,8 +50,8 @@ void main() {
     if(abs(displacement.x) <= 1.0 && abs(displacement.y) <= 1.0) {
         fragColor = vec3(1.0, 1.0, 1.0);
     } else {
-        fragColor = vec3(texture(uSpots, gUV).rg * 0.5, 0.0);
-        //fragColor = vec3(abs(displacement.x) * 0.1, abs(displacement.y) * 0.1, 0.0);
+        //fragColor = vec3(texture(uSpots, gUV).rg * 0.5, 0.0);
+        fragColor = vec3(abs(displacement.x) * 0.01, abs(displacement.y) * 0.01, 0.0);
         /*
         if(dot(gNormal, -uCamDir) < 0.3) {
             discard;
