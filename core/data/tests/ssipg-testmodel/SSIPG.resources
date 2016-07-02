@@ -22,12 +22,9 @@
     {
         "name" : "SSIPGTestMap.image",
         "type" : "image",
-        "file" : "Points.png",
+        "file" : "Points256.png",
         "parameters" : {
             "voronoi" : {
-                "absolute" : true,
-                "width" : 512,
-                "height" : 512,
                 "channel" : 0
             }
         }
