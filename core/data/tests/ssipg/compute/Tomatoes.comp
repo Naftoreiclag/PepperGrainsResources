@@ -1,14 +1,30 @@
 #version 430
 layout(local_size_x = 8, local_size_y = 8) in;
 
-layout(rgba32f) uniform readonly image2D gColor;
-uniform writeonly image2D potatoImg;
+layout(std430) buffer MacDuff {
+    uint count;
+};
+
+/*
+layout(std430) buffer Duncan {
+    uint pointLocations[];
+};
+*/
+
+layout(rgba32f) uniform readonly image2D sspoints;
 
 void main() {
+        uint ii = atomicAdd(count, 1);
+        /*
     ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
-    vec4 pColor = imageLoad(gColor, pixelCoords);
+    vec4 pColor = imageLoad(sspoints, pixelCoords);
     
-    ivec2 newCoords = ivec2(gl_WorkGroupID.xy * gl_WorkGroupSize.xy + (gl_WorkGroupSize.xy - gl_LocalInvocationID.xy));
-    
-    imageStore(potatoImg, newCoords, pColor);
+    if(pColor.r > 0) {
+        uint ii = atomicAdd(count, 1);
+        
+        if(ii < pointLocations.length()) {
+            pointLocations[ii] = pixelCoords.x;
+        }
+    }
+    */
 }

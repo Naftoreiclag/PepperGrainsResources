@@ -18,5 +18,10 @@
         "name" : "SSIPG.shaderProgram",
         "type" : "shader-program",
         "file" : "SSIPG.prog"
+    },
+    {
+        "name" : "Tomatoes.computeShader",
+        "type" : "compute-shader",
+        "file" : "compute/Tomatoes.comp"
     }
 ]
