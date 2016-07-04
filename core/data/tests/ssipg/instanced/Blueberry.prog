@@ -1,0 +1,31 @@
+{
+    "link" : [
+        "Blueberry.vertexShader",
+        "Blueberry.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
+    },
+    "pass-uniforms" : {
+        "viewProjection" : "uViewProj",
+        "inverseViewProjection" : "uInvViewProj",
+        "inverseScreenSize" : "uPixelSize"
+    },
+    "instancing" : {
+        "uint" : {
+            "pixels" : "iPackedPixel"
+        }
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuseMap" : "diffuseMap",
+            "depth" : "uDepth"
+        }
+    },
+    "output" : {
+        "diffuse" : "fColor",
+        "normal" : "fNormal"
+    }
+}

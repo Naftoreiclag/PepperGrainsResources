@@ -23,5 +23,20 @@
         "name" : "Tomatoes.computeShader",
         "type" : "compute-shader",
         "file" : "compute/Tomatoes.comp"
+    },
+    {
+        "name" : "Blueberry.shaderProgram",
+        "type" : "shader-program",
+        "file" : "instanced/Blueberry.prog"
+    },
+    {
+        "name" : "Blueberry.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "instanced/Blueberry.vert"
+    },
+    {
+        "name" : "Blueberry.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "instanced/Blueberry.frag"
     }
 ]
