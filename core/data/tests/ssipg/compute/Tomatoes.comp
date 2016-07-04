@@ -1,7 +1,7 @@
 #version 430
 layout(local_size_x = 8, local_size_y = 8) in;
 
-layout(std430) buffer CounterBuffer {
+layout(std430) coherent buffer CounterBuffer {
     uint count;
 };
 
@@ -12,14 +12,22 @@ layout(std430) buffer InstanceBuffer {
 layout(rgba16f) uniform image2D instanceImage;
 
 void main() {
+    
+    //atomicExchange(count, instanceCoords.length());
     ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
     
     vec4 pColor = imageLoad(instanceImage, pixelCoords);
     
     if(pColor.r > 0) {
         uint ii = atomicAdd(count, 1);
+        //atomicExchange(instanceCoords[0], pixelCoords.x);
         
-        instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
+        
+        /*
+        if(ii < instanceCoords.length()) {
+            instanceCoords[0] = pixelCoords.x | (pixelCoords.y << 16);
+        }
+        */
     }
     
 }

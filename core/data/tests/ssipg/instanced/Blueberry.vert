@@ -25,7 +25,7 @@ void main() {
     vec4 fPosition = uInvViewProj * vec4(instanceUV * 2.0 - 1.0, fDepthNDC, 1.0);
     fPosition /= fPosition.w; // perspective divide
 
-    gl_Position = uViewProj * (vec4(iPosition, 1.0));
+    gl_Position = uViewProj * (vec4(iPosition.x + instanceUV.x, iPosition.y + gl_InstanceID * 0.2, iPosition.z + instanceUV.y, 1.0));
     vUV = iUV;
     vNormal = iNormal;
 }
