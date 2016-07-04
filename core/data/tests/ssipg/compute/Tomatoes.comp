@@ -1,9 +1,7 @@
 #version 430
 layout(local_size_x = 8, local_size_y = 8) in;
 
-layout(std430) coherent buffer CounterBuffer {
-    uint count;
-};
+layout(binding = 0) uniform atomic_uint count;
 
 layout(std430) buffer InstanceBuffer {
     uint instanceCoords[];
@@ -19,8 +17,8 @@ void main() {
     vec4 pColor = imageLoad(instanceImage, pixelCoords);
     
     if(pColor.r > 0) {
-        uint ii = atomicAdd(count, 1);
-        //atomicExchange(instanceCoords[0], pixelCoords.x);
+        uint ii = atomicCounterIncrement(count);
+        atomicExchange(instanceCoords[0], ii);
         
         
         /*
