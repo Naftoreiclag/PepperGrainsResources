@@ -16,33 +16,10 @@ layout(rgba16f) uniform image2D sspoints;
 void main() {
     ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
     
-    //imageStore(sspoints, pixelCoords, vec4(gl_LocalInvocationID.xy / vec2(8, 8), 1.0, 0.0));
-    
     vec4 pColor = imageLoad(sspoints, pixelCoords);
     
     if(pColor.r > 0) {
-    //imageStore(sspoints, pixelCoords, vec4(0.0, pColor.g, pColor.b, 1.0));
         uint ii = atomicAdd(count, 1);
     }
-    else {
-    //imageStore(sspoints, pixelCoords, vec4(1.0, pColor.g, pColor.b, 1.0));
-    }
-    //imageStore(sspoints, pixelCoords, vec4(gl_LocalInvocationID.xy / vec2(8, 8), 1.0, 0.0));
-    
-    /*
-    if(pColor.g > 0.0) {
-        imageStore(sspoints, pixelCoords, vec4(1.0, 0.0, 1.0, 0.0));
-    
-        uint ii = atomicAdd(count, 1);
-        
-        if(ii < pointLocations.length()) {
-            //pointLocations[ii] = pixelCoords.x;
-        }
-    } else {
-        //imageStore(sspoints, pixelCoords, vec4(gl_LocalInvocationID.xy / vec2(8, 8), 1.0, 0.0));
-    
-        //imageStore(sspoints, pixelCoords, vec4(gl_LocalInvocationID.xy / vec2(8, 8), 1.0, 0.0));
-    }
-    */
     
 }
