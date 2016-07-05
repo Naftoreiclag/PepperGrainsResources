@@ -19,18 +19,20 @@ void main() {
     
     vec2 instanceUV = vec2(pX, pY) * uPixelSize;
     
-    /*
-    float fDepth = texture(uDepth, vUV).x; // Raw value
+    float fDepth = texture(uDepth, instanceUV).x; // Raw value
+    
+    if(fDepth > 0.9) {
+        fDepth = 0.9;
+    }
     float fDepthNDC = fDepth * 2.0 - 1.0; // Normalized device coordinates
     
     
     vec4 fPosition = uInvViewProj * vec4(instanceUV * 2.0 - 1.0, fDepthNDC, 1.0);
     fPosition /= fPosition.w; // perspective divide
-    */
 
-    gl_Position = uViewProj * (vec4(iPosition.x + instanceUV.x, iPosition.y, iPosition.z + instanceUV.y, 1.0));
+    gl_Position = uViewProj * (vec4(iPosition.xyz + fPosition.xyz, 1.0));
     
-    //gl_Position = uViewProj * (vec4(iPosition.x, iPosition.y + gl_InstanceID * 0.2, iPosition.z, 1.0));
+    //gl_Position = uViewProj * (vec4(iPosition.x + instanceUV.x, iPosition.y, iPosition.z + instanceUV.y, 1.0));
     vUV = iUV;
     vNormal = iNormal;
 }
