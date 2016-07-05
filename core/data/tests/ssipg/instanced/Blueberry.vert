@@ -17,7 +17,7 @@ void main() {
     int pY = iPackedPixel >> 16;
     int pX = iPackedPixel & 65535;
     
-    vec2 instanceUV = vec2(pX, pY) * 0.1;
+    vec2 instanceUV = vec2(pX, pY) * uPixelSize;
     
     /*
     float fDepth = texture(uDepth, vUV).x; // Raw value
