@@ -14,7 +14,7 @@
         "inverseScreenSize" : "uPixelSize"
     },
     "instancing" : {
-        "uint" : {
+        "int" : {
             "pixels" : "iPackedPixel"
         }
     },

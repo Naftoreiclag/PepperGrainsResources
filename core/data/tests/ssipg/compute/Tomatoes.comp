@@ -4,7 +4,7 @@ layout(local_size_x = 8, local_size_y = 8) in;
 layout(binding = 3) uniform atomic_uint count;
 
 layout(std430) buffer InstanceBuffer {
-    uint instanceCoords[];
+    int instanceCoords[];
 };
 
 layout(rgba16f) uniform image2D instanceImage;
@@ -18,8 +18,10 @@ void main() {
     
     if(pColor.r > 0) {
         uint ii = atomicCounterIncrement(count);
-        instanceCoords[0] = ii;
         
+        if(ii < instanceCoords.length()) {
+            instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
+        }
         
         /*
         if(ii < instanceCoords.length()) {

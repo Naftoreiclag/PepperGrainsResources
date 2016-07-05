@@ -3,7 +3,7 @@ in vec3 iPosition;
 in vec3 iNormal;
 in vec2 iUV;
 
-in uint iPackedPixel;
+in int iPackedPixel;
 
 out vec3 vNormal;
 out vec2 vUV;
@@ -14,8 +14,9 @@ uniform mat4 uViewProj;
 uniform sampler2D uDepth;
 
 void main() {
-    uint pY = iPackedPixel >> 16;
-    uint pX = iPackedPixel - pY;
+    /*
+    int pY = iPackedPixel >> 16;
+    int pX = iPackedPixel - pY;
     
     vec2 instanceUV = uPixelSize * vec2(pX, pY);
     float fDepth = texture(uDepth, vUV).x; // Raw value
@@ -26,6 +27,8 @@ void main() {
     fPosition /= fPosition.w; // perspective divide
 
     gl_Position = uViewProj * (vec4(iPosition.x + instanceUV.x, iPosition.y + gl_InstanceID * 0.2, iPosition.z + instanceUV.y, 1.0));
+    */
+    gl_Position = uViewProj * (vec4(iPosition.x, iPosition.y + gl_InstanceID * 0.2, iPosition.z, 1.0));
     vUV = iUV;
     vNormal = iNormal;
 }
