@@ -4,6 +4,7 @@ in vec3 iNormal;
 in vec2 iUV;
 
 in int iPackedPixel;
+in int iHtped;
 
 out vec3 vNormal;
 out vec2 vUV;
@@ -20,6 +21,7 @@ void main() {
     vec2 instanceUV = vec2(pX, pY) * uPixelSize;
     
     float fDepth = texture(uDepth, instanceUV).x; // Raw value
+    //fDepth = iHtped;
     
     float fDepthNDC = fDepth * 2.0 - 1.0; // Normalized device coordinates
     

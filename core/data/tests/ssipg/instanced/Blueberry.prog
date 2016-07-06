@@ -16,6 +16,9 @@
     "instancing" : {
         "int" : {
             "pixels" : "iPackedPixel"
+        },
+        "float" : {
+            "htped" : "iHtped"
         }
     },
     "controls" : {
