@@ -7,11 +7,11 @@ layout(std430) buffer InstanceBuffer {
     int instanceCoords[];
 };
 layout(std430) buffer HtpedBuffer {
-    int htped[];
+    float htped[];
 };
 
 layout(rgba16f) uniform image2D instanceImage;
-//layout(r32f) uniform image2D htpedImage;
+layout(r32f) uniform image2D htpedImage;
 
 uniform sampler2D instanceSampler;
 
@@ -21,16 +21,18 @@ void main() {
     
     vec4 pColor = imageLoad(instanceImage, pixelCoords);
     
+    /*
     vec2 asdf = pixelCoords;
     asdf /= vec2(1280.0, 720.0);
     pColor = texture(instanceSampler, asdf);
+    */
     
     if(pColor.r > 0) {
         uint ii = atomicCounterIncrement(count);
         
         if(ii < instanceCoords.length()) {
             instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
-            //htped[ii] = imageLoad(htpedImage, pixelCoords).r;
+            htped[ii] = imageLoad(htpedImage, pixelCoords).r;
         }
     }
     
