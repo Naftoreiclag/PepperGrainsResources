@@ -44,7 +44,7 @@ void main() {
     vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
     
     if(abs(displacement.x) <= 1.0 && abs(displacement.y) <= 1.0) {
-        fragColor = vec3(1.0, 1.0, 1.0);
+        fragColor = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
     } else {
     discard;
     /*

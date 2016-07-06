@@ -25,9 +25,6 @@ void main() {
     
     // Value is zero
     
-    if(fDepth < 0.1) {
-        fDepth = 0.1;
-    };
     
     float fDepthNDC = fDepth * 2.0 - 1.0; // Normalized device coordinates
     

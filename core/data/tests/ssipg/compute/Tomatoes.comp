@@ -10,8 +10,8 @@ layout(std430) buffer HtpedBuffer {
     float htped[];
 };
 
-layout(rgba16f) uniform image2D instanceImage;
-layout(r32f) uniform image2D htpedImage;
+layout(rgba16f) uniform readonly image2D instanceImage;
+layout(r32f) uniform readonly image2D htpedImage;
 
 uniform sampler2D instanceSampler;
 
@@ -27,12 +27,13 @@ void main() {
     pColor = texture(instanceSampler, asdf);
     */
     
+    
     if(pColor.r > 0) {
         uint ii = atomicCounterIncrement(count);
         
         if(ii < instanceCoords.length()) {
             instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
-            htped[ii] = imageLoad(htpedImage, pixelCoords).r;
+            htped[ii] = pColor.r;
         }
     }
     
