@@ -21,9 +21,6 @@ void main() {
     
     float fDepth = texture(uDepth, instanceUV).x; // Raw value
     
-    if(fDepth > 0.9) {
-        fDepth = 0.9;
-    }
     float fDepthNDC = fDepth * 2.0 - 1.0; // Normalized device coordinates
     
     
