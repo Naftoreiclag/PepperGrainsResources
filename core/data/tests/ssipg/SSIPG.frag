@@ -33,9 +33,15 @@ vec3 trueBarycentricUV(vec2 uv) {
 }
 
 void main() {
-    vec2 trueUV = texture(uSpots, gUV).rg;
+
+    // Standard
+    //vec2 trueUV = texture(uSpots, gUV).rg;
+    
+    float asdf = 30;
+    vec2 trueUV = vec2(round(gUV.x * asdf) / asdf, round(gUV.y * asdf) / asdf);
     
     vec3 trueBary = trueBarycentricUV(trueUV);
+    
     vec4 trueNDC = uMVP * vec4(gTriModelPos[0] * trueBary[0] + gTriModelPos[1] * trueBary[1] + gTriModelPos[2] * trueBary[2], 1.0);
     trueNDC /= trueNDC.w;
     
@@ -43,10 +49,14 @@ void main() {
     
     vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
     
+    // Standard
     if(abs(displacement.x) <= 1.0 && abs(displacement.y) <= 1.0) {
         fragColor = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
     } else {
-    discard;
+        discard;
+    }
+    
+    
     /*
         if(dot(gNormal, -uCamDir) < 0.5) {
             discard;
@@ -54,5 +64,5 @@ void main() {
             // fragColor = vec3(abs(displacement.x) * 0.01, abs(displacement.y) * 0.01, 0.0);
             fragColor = vec3(0.0, 0.0, 0.0);
         }
-    */}
+    */
 }

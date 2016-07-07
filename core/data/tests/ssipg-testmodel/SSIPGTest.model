@@ -1,7 +1,7 @@
 {
     "solids" : [
         {
-            "geometry" : "UVSphere.geometry",
+            "geometry" : "Cube.geometry",
             "material" : "SSIPGTest.material"
         }
     ]

@@ -53,7 +53,7 @@
     {
         "name" : "TestPlane.geometry",
         "type" : "geometry",
-        "file" : "20Plane.fbx",
+        "file" : "32Plane.fbx",
         "parameters" : {
             "pretransform" : true,
             "uvs" : {
