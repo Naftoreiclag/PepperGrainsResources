@@ -43,5 +43,22 @@
         "name" : "SSIPGTestDiffuse.texture",
         "type" : "texture",
         "file" : "SSIPGTestDiffuse.texture"
+    },
+    {
+        "name" : "128Plane.geometry",
+        "type" : "geometry",
+        "file" : "128Plane.fbx",
+        "parameters" : {
+            "pretransform" : true,
+            "uvs" : {
+                "flip" : true
+            },
+            "tangents" : {
+                "generate" : true
+            },
+            "color" : {
+                "remove" : true
+            }
+        }
     }
 ]

@@ -15,7 +15,9 @@ uniform mat4 uMVP;
 uniform vec2 uScreenSize;
 uniform vec3 uCamDir;
 
-out vec3 fragColor;
+out vec3 fInst;
+out vec4 fOrient;
+out vec3 fForce;
 
 uniform sampler2D uSpots;
 
@@ -37,7 +39,7 @@ void main() {
     // Standard
     //vec2 trueUV = texture(uSpots, gUV).rg;
     
-    float asdf = 30;
+    float asdf = 2000;
     vec2 trueUV = vec2(round(gUV.x * asdf) / asdf, round(gUV.y * asdf) / asdf);
     
     vec3 trueBary = trueBarycentricUV(trueUV);
@@ -50,8 +52,8 @@ void main() {
     vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
     
     // Standard
-    if(abs(displacement.x) <= 1.0 && abs(displacement.y) <= 1.0) {
-        fragColor = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
+    if(abs(displacement.x) <= 1.5 && abs(displacement.y) <= 1.5) {
+        fInst = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
     } else {
         discard;
     }
@@ -61,8 +63,8 @@ void main() {
         if(dot(gNormal, -uCamDir) < 0.5) {
             discard;
         } else {
-            // fragColor = vec3(abs(displacement.x) * 0.01, abs(displacement.y) * 0.01, 0.0);
-            fragColor = vec3(0.0, 0.0, 0.0);
+            // fInst = vec3(abs(displacement.x) * 0.01, abs(displacement.y) * 0.01, 0.0);
+            fInst = vec3(0.0, 0.0, 0.0);
         }
     */
 }

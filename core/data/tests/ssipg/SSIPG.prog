@@ -21,7 +21,8 @@
         }
     },
     "output" : {
-        "diffuse" : "fColor",
-        "normal" : "fNormal"
+        "ssipg-depth" : "fInst",
+        "ssipg-orientation" : "fOrient",
+        "ssipg-force" : "fForce"
     }
 }
