@@ -16,7 +16,7 @@ uniform vec2 uScreenSize;
 uniform vec3 uCamDir;
 
 out vec3 fInst;
-out vec4 fOrient;
+out vec3 fOrient;
 out vec3 fForce;
 
 uniform sampler2D uSpots;
@@ -54,6 +54,7 @@ void main() {
     // Standard
     if(abs(displacement.x) <= 1.5 && abs(displacement.y) <= 1.5) {
         fInst = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
+        fOrient = vec3(1.0, 1.0, 0.0);
     } else {
         discard;
     }
