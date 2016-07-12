@@ -5,9 +5,11 @@ in vec2 iUV;
 
 in int iPackedPixel;
 in float iHtped;
+in vec3 iDiffuse;
 
 out vec3 vNormal;
 out vec2 vUV;
+out vec3 vDiffuse;
 
 uniform vec2 uPixelSize;
 uniform mat4 uInvViewProj;
@@ -20,13 +22,10 @@ void main() {
     
     vec2 instanceUV = vec2(pX, pY) * uPixelSize;
     
-    float fDepth = texture(uDepth, instanceUV).x; // Raw value
-    fDepth = iHtped;
     
-    // Value is zero
+    vDiffuse = iDiffuse;
     
-    
-    float fDepthNDC = fDepth * 2.0 - 1.0; // Normalized device coordinates
+    float fDepthNDC = iHtped * 2.0 - 1.0; // Normalized device coordinates
     
     
     vec4 fPosition = uInvViewProj * vec4(instanceUV * 2.0 - 1.0, fDepthNDC, 1.0);

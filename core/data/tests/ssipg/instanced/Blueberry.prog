@@ -19,12 +19,14 @@
         },
         "float" : {
             "htped" : "iHtped"
+        },
+        "vec3" : {
+            "diffuse" : "iDiffuse"
         }
     },
     "controls" : {
         "sampler2D" : {
-            "diffuseMap" : "diffuseMap",
-            "depth" : "uDepth"
+            "diffuseMap" : "diffuseMap"
         }
     },
     "output" : {

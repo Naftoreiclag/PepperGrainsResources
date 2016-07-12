@@ -34,6 +34,7 @@ void main() {
         if(ii < instanceCoords.length()) {
             instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
             htped[ii] = pColor.r;
+            //color[ii] = vec3(1.0, 1.0, 1.0);
         }
     }
     
