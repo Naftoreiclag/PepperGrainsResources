@@ -6,8 +6,9 @@ layout(binding = 3) uniform atomic_uint count;
 layout(std430) buffer InstanceBuffer {
     int instanceCoords[];
 };
+
 layout(std430) buffer HtpedBuffer {
-    float htped[];
+    float partDesc[];
 };
 
 layout(rgba32f) uniform readonly image2D instanceImage;
@@ -33,8 +34,13 @@ void main() {
         
         if(ii < instanceCoords.length()) {
             instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
-            htped[ii] = pColor.r;
-            //color[ii] = vec3(1.0, 1.0, 1.0);
+            
+            ii *= 4;
+            
+            partDesc[ii    ] = pColor.r;
+            partDesc[ii + 1] = 0.5;
+            partDesc[ii + 2] = 0.5;
+            partDesc[ii + 3] = 0.5;
         }
     }
     
