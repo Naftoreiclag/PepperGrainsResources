@@ -53,10 +53,10 @@ void main() {
     vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
     
     // Standard
-    if(abs(displacement.x) <= 1.5 && abs(displacement.y) <= 1.5) {
+    if(abs(displacement.x) <= 1.2 && abs(displacement.y) <= 1.2) {
         fInst = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
         
-        fDiffuse = vec3(gUV.x, gUV.y, 0.0);
+        fDiffuse = vec3(mod(gUV.x, 0.05), mod(gUV.y, 0.05), 0.0);
     } else {
         discard;
     }

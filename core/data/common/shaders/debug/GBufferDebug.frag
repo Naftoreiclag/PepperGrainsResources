@@ -14,9 +14,9 @@ uniform mat4 uInvViewProj;
 
 void main() {
     vec3 fDiffuse = texture(gDiffuse, vUV).xyz;
-    vec3 fNormal = texture(gNormal, vUV).xyz * 0.5 + 0.5;
+    vec3 fNormal = texture(gNormal, vUV).xyz;
     vec3 fBright = texture(gBright, vUV).xyz;
-    float fDepth = texture(gDepth, vUV).x;
+    vec3 fDepth = texture(gDepth, vUV).xyz;
     /*
     vec4 fPosition = uInvViewProj * vec4(vUV * 2.0 - 1.0, fDepth * 2.0 - 1.0, 1.0);
     fPosition /= fPosition.w; // perspective divide
@@ -31,7 +31,7 @@ void main() {
     oColor = (
         fDiffuse * uShowWhat.x + 
         fNormal * uShowWhat.y + 
-        vec3(fDepth) * uShowWhat.z + 
-        vec3(fBright) * uShowWhat.w
+        fDepth * uShowWhat.z + 
+        fBright * uShowWhat.w
         ) / (uShowWhat.x + uShowWhat.y + uShowWhat.z + uShowWhat.w);
 }

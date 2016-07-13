@@ -13,6 +13,7 @@ layout(std430) buffer HtpedBuffer {
 
 layout(rgba32f) uniform readonly image2D instanceImage;
 layout(rgba32f) uniform readonly image2D diffuseImage;
+layout(rgba32f) uniform readonly image2D orientImage;
 
 void main() {
     
