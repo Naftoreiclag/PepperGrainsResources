@@ -10,8 +10,7 @@
     },
     "pass-uniforms" : {
         "viewProjection" : "uViewProj",
-        "inverseViewProjection" : "uInvViewProj",
-        "inverseScreenSize" : "uPixelSize"
+        "inverseViewProjection" : "uInvViewProj"
     },
     "instancing" : {
         "int" : {
@@ -21,6 +20,7 @@
             "htped" : "iHtped"
         },
         "vec3" : {
+            "location" : "iLocation",
             "diffuse" : "iDiffuse"
         }
     },

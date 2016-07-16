@@ -23,7 +23,6 @@
     "output" : {
         "ssipg-depth" : "fInst",
         "ssipg-diffuse" : "fDiffuse",
-        "ssipg-orientation" : "fOrient",
-        "ssipg-force" : "fForce"
+        "ssipg-orientation" : "fOrient"
     }
 }

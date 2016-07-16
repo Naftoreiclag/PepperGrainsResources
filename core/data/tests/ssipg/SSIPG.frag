@@ -17,8 +17,7 @@ uniform vec3 uCamDir;
 
 out vec3 fInst;
 out vec3 fDiffuse;
-out vec3 fOrient;
-out vec3 fForce;
+out vec4 fOrient;
 
 uniform sampler2D uSpots;
 
@@ -53,10 +52,12 @@ void main() {
     vec2 displacement = (trueNDC.xy - fNDC) * uScreenSize;
     
     // Standard
-    if(abs(displacement.x) <= 1.2 && abs(displacement.y) <= 1.2) {
-        fInst = vec3(gl_FragCoord.z, gl_FragCoord.z, gl_FragCoord.z);
+    if(abs(displacement.x) < 1.1 && abs(displacement.y) < 1.1) {
+        // TODO: also provide displacement for more accurate placement
+        fInst = vec3(displacement.x, displacement.y, gl_FragCoord.z);
         
-        fDiffuse = vec3(mod(gUV.x, 0.05), mod(gUV.y, 0.05), 0.0);
+        fDiffuse = vec3(mod(gUV.x, 0.05) * 20.0, mod(gUV.y, 0.05) * 20.0, 0.0);
+        //fOrient = ;
     } else {
         discard;
     }

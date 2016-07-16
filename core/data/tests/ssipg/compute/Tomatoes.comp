@@ -15,26 +15,30 @@ layout(rgba32f) uniform readonly image2D instanceImage;
 layout(rgba32f) uniform readonly image2D diffuseImage;
 layout(rgba32f) uniform readonly image2D orientImage;
 
+uniform vec2 uPixelSize;
+
 void main() {
     
     ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
     
-    vec4 pColor = imageLoad(instanceImage, pixelCoords);
+    vec4 pLoc = imageLoad(instanceImage, pixelCoords);
     
-    if(pColor.r > 0) {
+    if(pLoc.z > 0.0) {
         uint ii = atomicCounterIncrement(count);
         
         if(ii < instanceCoords.length()) {
-            instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
+            //instanceCoords[ii] = pixelCoords.x | (pixelCoords.y << 16);
             
             vec4 pDiffuse = imageLoad(diffuseImage, pixelCoords);
             
-            ii *= 4;
+            ii *= 6;
             
-            partDesc[ii    ] = pColor.r;
-            partDesc[ii + 1] = pDiffuse.r;
-            partDesc[ii + 2] = pDiffuse.g;
-            partDesc[ii + 3] = pDiffuse.b;
+            partDesc[ii    ] = uPixelSize.x * (pLoc.x + pixelCoords.x);
+            partDesc[ii + 1] = uPixelSize.y * (pLoc.y + pixelCoords.y);
+            partDesc[ii + 2] = pLoc.z;
+            partDesc[ii + 3] = pDiffuse.r;
+            partDesc[ii + 4] = pDiffuse.g;
+            partDesc[ii + 5] = pDiffuse.b;
         }
     }
     
