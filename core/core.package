@@ -1,0 +1,19 @@
+{
+    "info" : {
+        "name" : "Core",
+        "description" : "Application will fail to load without this package.",
+        "author" : "Naftoreiclag",
+        "version" : "0.0.1"
+    },
+    
+    "environment" : {
+        "address" : "core",
+        "share" : [],
+        "require" : [],
+        "after": []
+    },
+    
+    "bootstrap" : [
+        "bootstrap.script"
+    ]
+}

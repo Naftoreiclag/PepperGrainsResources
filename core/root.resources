@@ -1,0 +1,8 @@
+# Resources stored in the root of the package project
+[
+    {
+        "name" : "bootstrap.script",
+        "type" : "script",
+        "file" : "bootstrap.lua"
+    }
+]
