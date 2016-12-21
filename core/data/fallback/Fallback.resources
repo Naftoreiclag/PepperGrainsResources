@@ -1,0 +1,7 @@
+[
+    {
+        "name" : "Error.image",
+        "type" : "image",
+        "file" : "Fallback.png"
+    }
+]
