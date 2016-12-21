@@ -1,0 +1,23 @@
+{
+    "link" : [
+        "HLVSShoForwardDiffuseTex.vertexShader",
+        "HLVSShoForwardDiffuseTex.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition",
+        "normal" : "iNormal",
+        "uv" : "iUV"
+    },
+    "pass-uniforms" : {
+        "model" : "uModel",
+        "modelViewProjection" : "uMVP"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "diffuse" : "uDiffuse"
+        }
+    },
+    "output" : {
+        "forward" : "fOutput"
+    }
+}

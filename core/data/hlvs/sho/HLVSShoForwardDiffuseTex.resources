@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "HLVSShoForwardDiffuseTex.vertexShader",
+        "type" : "vertex-shader",
+        "file" : "HLVSShoForwardDiffuseTex.vert"
+    },
+    {
+        "name" : "HLVSShoForwardDiffuseTex.fragmentShader",
+        "type" : "fragment-shader",
+        "file" : "HLVSShoForwardDiffuseTex.frag"
+    },
+    {
+        "name" : "HLVSShoForwardDiffuseTex.shaderProgram",
+        "type" : "shader-program",
+        "file" : "HLVSShoForwardDiffuseTex.prog"
+    }
+]

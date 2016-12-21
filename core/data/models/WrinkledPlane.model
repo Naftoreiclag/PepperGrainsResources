@@ -2,7 +2,7 @@
     "solids" : [
         {
             "geometry" : "WrinkledPlane.geometry",
-            "material" : "Slime.material"
+            "material" : "Turf.material"
         }
     ]
 }
