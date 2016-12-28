@@ -3,5 +3,10 @@
         "name" : "Error.image",
         "type" : "image",
         "file" : "Fallback.png"
+    },
+    {
+        "name" : "Error.texture",
+        "type" : "texture",
+        "file" : "Fallback.texture"
     }
 ]

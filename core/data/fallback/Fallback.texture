@@ -1,0 +1,9 @@
+{
+    "image" : "Error.image",
+    "internalFormat" : "RGB8",
+    "pixelFormat" : "RGB",
+    "minFilter" : "nearest",
+    "magFilter" : "nearest",
+    "wrapX" : "repeat",
+    "wrapY" : "repeat"
+}
