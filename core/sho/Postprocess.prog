@@ -1,0 +1,17 @@
+{
+    "link" : [
+        "sho.Postprocess.vertexShader",
+        "sho.Postprocess.fragmentShader"
+    ],
+    "attributes" : {
+        "position" : "iPosition"
+    },
+    "controls" : {
+        "sampler2D" : {
+            "forward" : "gForward"
+        }
+    },
+    "output" : {
+        "color" : "oColor"
+    }
+}
