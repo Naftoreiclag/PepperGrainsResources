@@ -1,4 +1,5 @@
 core-intermediate/*
 core/data/test/*
+templates/*
 *.blend1
 *.7z
